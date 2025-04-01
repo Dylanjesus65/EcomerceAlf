@@ -1,0 +1,91 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ServicioCard from "../components/ServicioCard.astro";
+import servicios from '../data/servicios';
+
+// Convertimos el objeto en un array de servicios
+const serviciosArray = Object.entries(servicios).map(([slug, data]) => ({
+  slug,
+  ...data
+}));
+---
+
+<Layout>
+  <Header />
+  <head>
+    <title>Servicios | Mi E-commerce</title>
+  </head>
+
+  <div id="preloader" class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-white z-50">
+    <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500"></div>
+  </div>
+  
+
+  <section class="container mx-auto py-8">
+    <h1 class="text-3xl  text-gray-600 font-bold text-center mb-6">Encuentra tu servicio</h1>
+
+    <!-- Barra de búsqueda -->
+    <div class="mb-6 text-center">
+      <input 
+        type="text"
+        id="busqueda"
+        placeholder="Buscar servicio..."
+        class="px-4 py-2 border  rounded-lg w-1/2"
+      />
+    </div>
+
+    <!-- Contenedor de servicios -->
+    <div id="servicios-container" class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8">
+      {serviciosArray.map(servicio => (
+        <div class="servicio-card" data-nombre={servicio.nombre.toLowerCase()} data-descripcion={servicio.descripcion.toLowerCase()}>
+          <ServicioCard servicio={servicio} key={servicio.slug} />
+        </div>
+      ))}
+    </div>
+  </section>
+  
+  <script>
+    window.addEventListener("load", () => {
+      const preloader = document.getElementById("preloader");
+      if (preloader) {
+        preloader.style.opacity = "0";
+        setTimeout(() => {
+          preloader.style.display = "none";
+        }, 500);
+      }
+    });
+  </script>
+  
+
+  <Footer />
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const inputBusqueda = document.getElementById("busqueda") as HTMLInputElement | null;
+      const servicios = document.querySelectorAll(".servicio-card") as NodeListOf<HTMLDivElement>;
+  
+      if (!inputBusqueda) return; // Evita errores si el input no existe
+  
+      inputBusqueda.addEventListener("input", () => {
+        const query = inputBusqueda.value.toLowerCase();
+  
+        servicios.forEach((servicio) => {
+          const servicioElement = servicio as HTMLDivElement;
+          const nombre = servicioElement.dataset.nombre || "";
+          const descripcion = servicioElement.dataset.descripcion || "";
+  
+          if (nombre.includes(query) || descripcion.includes(query)) {
+            servicioElement.style.display = "block";
+          } else {
+            servicioElement.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
+  
+
+  
+</Layout>

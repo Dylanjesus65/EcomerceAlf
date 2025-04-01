@@ -1,0 +1,45 @@
+---
+import "./src/styles/global.css";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width", initial-scale ="1.0"/>
+    <link rel="icon" type="image/png+xml" href="/logo-1.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Alf S.A</title>
+  </head>
+  <body class="flex flex-col min-h-screen">
+    
+    <slot class="flex grow"/>
+  </body>
+</html>
+
+<style >
+  
+  html {
+    font-family:;
+  }
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  /* Para navegadores basados en WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Para Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Para Internet Explorer y Edge antiguos */
+body {
+  -ms-overflow-style: none;
+}
+
+</style>

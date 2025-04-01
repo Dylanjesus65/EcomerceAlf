@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+// No es necesario importar nada en este componente
+
+---
+<Layout>
+  <header class="flex flex-col md:flex-row space-x-0 md:space-x-8 bg-white-400 text-yellow-500 py-4">
+    <div class="container mx-auto flex justify-between items-center px-4">
+        <a href="/" class="flex text-xl font-bold max-w-[150px]">
+            <img src="/logo2.png" alt="Logo" class="h-10 w-full object-contain" />
+        </a>
+        <button class="md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
+        <nav class="hidden md:flex">
+            <ul class="flex space-x-8">
+                <li><a href="/" class="hover:text-blue-300">Home</a></li>
+                <li><a href="/servicios" class="hover:text-blue-300">Servicios</a></li>
+                <li><a href="/nosotros" class="hover:text-blue-300">Acerca de Nosotros</a></li>
+                <li><a href="/contacto" class="hover:text-blue-300">Contacto</a></li>
+            </ul>
+        </nav>
+        <ul id="mobile-menu" class="hidden flex-col absolute top-full left-0 w-full bg-white shadow-md rounded-b-md">
+            <li><a href="/" class="block py-2 px-4 hover:bg-gray-100">Home</a></li>
+            <li><a href="/servicios" class="block py-2 px-4 hover:bg-gray-100">Servicios</a></li>
+            <li><a href="/nosotros" class="block py-2 px-4 hover:bg-gray-100">Acerca de Nosotros</a></li>
+            <li><a href="/contacto" class="block py-2 px-4 hover:bg-gray-100">Contacto</a></li>
+        </ul>
+    </div>
+</header>
+
+  <script>
+        const menuButton = document.querySelector('button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</Layout>
+
+  

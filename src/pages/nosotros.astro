@@ -1,0 +1,73 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <Header />
+
+  <!-- Sección Hero -->
+  <section class="relative bg-gray-900 text-white text-center py-28">
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/team-bg.jpg'); opacity: 0.2;"></div>
+    <div class="relative z-10">
+      <h1 class="text-5xl font-bold">Sobre Nosotros</h1>
+      <p class="text-xl mt-4 text-gray-300">Construimos experiencias digitales con pasión y creatividad.</p>
+    </div>
+  </section>
+
+  <!-- Historia -->
+  <section class="py-20 container mx-auto text-center px-6">
+    <h2 class="text-4xl font-bold text-gray-900">Nuestra Historia</h2>
+    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+      Fundamos esta empresa con la misión de ofrecer soluciones tecnológicas innovadoras. Desde nuestros inicios, hemos trabajado con clientes de todo el mundo para crear productos digitales excepcionales.
+    </p>
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <img src="/about-1.jpg" class="rounded-lg shadow-lg w-full" alt="Historia 1">
+      <img src="/about-2.jpg" class="rounded-lg shadow-lg w-full" alt="Historia 2">
+    </div>
+  </section>
+
+  <!-- Misión y Visión -->
+  <section class="py-20 bg-gray-100">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div class="bg-white shadow-lg rounded-lg p-8 text-center">
+        <h3 class="text-2xl font-semibold text-gray-900">Nuestra Misión</h3>
+        <p class="text-gray-600 mt-4">
+          Transformar ideas en productos digitales de alto impacto, impulsando el crecimiento de nuestros clientes con soluciones innovadoras.
+        </p>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg p-8 text-center">
+        <h3 class="text-2xl font-semibold text-gray-900">Nuestra Visión</h3>
+        <p class="text-gray-600 mt-4">
+          Ser una empresa líder en tecnología, reconocida por la calidad y creatividad en cada proyecto que realizamos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 container mx-auto text-center">
+    <h2 class="text-4xl font-bold text-gray-900">Conoce a nuestro equipo</h2>
+    <p class="text-gray-600 mt-4">Un grupo de apasionados por la Seguridad y mejora.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 mt-12">
+      <div>
+        <img src="/team-1.jpg" class="w-40 h-40 mx-auto rounded-full shadow-lg transition-transform duration-300 hover:scale-105" alt="Foto de Juan Pérez, CEO y Fundador">
+        <h3 class="text-xl font-semibold mt-4">Alex Freire</h3>
+        <p class="text-gray-600">CEO & Fundador</p>
+        <p class="text-gray-600">Responsable de la visión y estrategia de la empresa.</p>
+        <a href="https://www.linkedin.com/in/juanperez" target="_blank" class="text-blue-500 hover:underline mt-2 block">LinkedIn</a>
+      </div>
+      <div>
+        <img src="/team-2.jpg" class="w-40 h-40 mx-auto rounded-full shadow-lg transition-transform duration-300 hover:scale-105" alt="Foto de Ana López, CTO y Co-Fundadora">
+        <h3 class="text-xl font-semibold mt-4">Ana López</h3>
+        <p class="text-gray-600">CTO & Co-Fundadora</p>
+        <p class="text-gray-600">Líder técnico y experta en desarrollo de software.</p>
+        <a href="https://www.linkedin.com/in/analopez" target="_blank" class="text-blue-500 hover:underline mt-2 block">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+
+  
+  <Footer />
+</Layout>

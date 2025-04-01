@@ -1,0 +1,114 @@
+---
+import servicios from "../../data/servicios";
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+export function getStaticPaths() {
+  return Object.keys(servicios).map((slug) => ({
+    params: { slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const servicio = servicios[slug as keyof typeof servicios] ?? null;
+
+if (!servicio) {
+  throw new Error("Servicio no encontrado");
+}
+
+const whatsappNumber = "593992738731";
+let respuesta = "";
+
+
+---
+
+<Layout>
+  <Header />
+
+  <section class="container mx-auto px-6 py-30 flex-grow">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div class="w-full max-w-3xl mx-auto">
+        <div class="aspect-w-16 aspect-h-9">
+          <img
+            src={servicio.imagen}
+            alt={servicio.nombre}
+            class="w-full h-full object-contain"
+          />
+        </div>
+      </div>
+
+      <div class="text-left">
+        <span
+          class="bg-green-200 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded"
+          >Oferta</span
+        >
+        <h1 id="nombre_serv" class="text-3xl font-bold mt-2">
+          {servicio.nombre}
+        </h1>
+        <details class="mt-6 bg-gray-100 p-4 rounded-lg">
+          <summary class="cursor-pointer text-lg font-semibold"
+            >Descripcion</summary
+          >
+          <p class="text-gray-600 mt-2">{servicio.descripcion}</p>
+        </details>
+        <p  id="precio_serv" class="text-2xl font-semibold mt-2">{servicio.precio}</p>
+
+        <label id="pregunta_serv" for="respuesta" class="block mt-4 text-lg font-medium">
+          {servicio.pregunta}
+        </label>
+        <input
+          id="respuesta"
+          type="text"
+          placeholder="Escribe tu respuesta aquí..."
+          class="w-full p-3 mt-2 border rounded-lg"
+        />
+
+        <a
+          id="whatsappLink"
+          href={`https://wa.me/${whatsappNumber}?text=Hola,%20estoy%20interesado%20en%20${servicio.nombre}%20por%20${servicio.precio}.%20Respuesta:%20${respuesta}.%20¿Cómo%20puedo%20gestionar%20mi%20compra?`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full flex justify-center items-center gap-2 bg-green-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-700 transition-transform transform hover:scale-105 hover:shadow-xl"
+        >
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          Comprar por WhatsApp
+        </a>
+
+        
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script>
+  const whatsappNumber = "593992738731";
+  const respuestaInput = document.getElementById(
+    "respuesta"
+  ) as HTMLInputElement;
+  const nombreServ = document.getElementById(
+    "nombre_serv"
+  ) as HTMLElement;
+  const nombre = nombreServ.textContent?.trim() || "";
+  const precioServ = document.getElementById(
+    "precio_serv"
+  ) as HTMLElement;
+  const precio = precioServ.textContent?.trim() || "";
+  const preguntServ = document.getElementById(
+    "pregunta_serv"
+  ) as HTMLElement;
+  const pregunta = preguntServ.textContent?.trim() || "";
+  const whatsappLink = document.getElementById(
+    "whatsappLink"
+  ) as HTMLAnchorElement;
+
+  respuestaInput.addEventListener("input", () => {
+    let respuesta = respuestaInput.value;
+    whatsappLink.href = `https://wa.me/${whatsappNumber}?text=Hola,%20estoy%20interesado%20en%20${nombre}%20por%20${precio}.%20${pregunta}%20${respuesta}.%20¿Cómo%20puedo%20gestionar%20mi%20compra?`;
+  });
+
+  // Actualiza el enlace inicial con la respuesta vacía
+  whatsappLink.href = `https://wa.me/${whatsappNumber}?text=Hola,%20estoy%20interesado%20en%20${nombre}%20por%20${precio}.%20Respuesta:%20¿Cómo%20puedo%20gestionar%20mi%20compra?`;
+</script>

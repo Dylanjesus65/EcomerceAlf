@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+Header{
+   position: sticky;
+  top: 0; /* Esto hace que se quede pegada al tope de la página */
+  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+  background-color: #fff; /* Un fondo para que se vea bien */
+  box-shadow: 0 2px 4px rgba(223, 132, 14, 0.801); /* Sombra opcional para dar un efecto de profundidad */
+   background-color: ghostwhite;
+}
