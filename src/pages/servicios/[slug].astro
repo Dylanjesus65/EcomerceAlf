@@ -26,59 +26,47 @@ let respuesta = "";
 <Layout>
   <Header />
 
-  <section class="container mx-auto px-6 py-30 flex-grow">
+  <section class="container mx-auto px-6 py-20 flex-grow bg-white shadow-lg rounded-xl">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-      <div class="w-full max-w-3xl mx-auto">
-        <div class="aspect-w-16 aspect-h-9">
-          <img
-            src={servicio.imagen}
-            alt={servicio.nombre}
-            class="w-full h-full object-contain"
-          />
-        </div>
+      <!-- Imagen del Servicio -->
+      <div class="rounded-xl overflow-hidden shadow-xl">
+        <img src={servicio.imagen} alt={servicio.nombre} class="w-full h-auto object-cover rounded-xl"/>
       </div>
-
+  
+      <!-- Detalles del Servicio -->
       <div class="text-left">
-        <span
-          class="bg-green-200 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded"
-          >Oferta</span
-        >
-        <h1 id="nombre_serv" class="text-3xl font-bold mt-2">
-          {servicio.nombre}
-        </h1>
-        <details class="mt-6 bg-gray-100 p-4 rounded-lg">
-          <summary class="cursor-pointer text-lg font-semibold"
-            >Descripcion</summary
-          >
+        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Oferta</span>
+        <h1 class="text-3xl font-bold mt-2">{servicio.nombre}</h1>
+  
+        <div class="mt-6 p-4 bg-gray-100 rounded-lg shadow-md">
+          <h2 class="text-lg font-semibold cursor-pointer">Descripción</h2>
           <p class="text-gray-600 mt-2">{servicio.descripcion}</p>
-        </details>
-        <p  id="precio_serv" class="text-2xl font-semibold mt-2">{servicio.precio}</p>
-
-        <label id="pregunta_serv" for="respuesta" class="block mt-4 text-lg font-medium">
-          {servicio.pregunta}
-        </label>
+        </div>
+  
+        
+  
+        <label for="respuesta" class="block mt-4 text-lg font-medium">{servicio.pregunta}</label>
         <input
           id="respuesta"
           type="text"
           placeholder="Escribe tu respuesta aquí..."
-          class="w-full p-3 mt-2 border rounded-lg"
+          class="w-full p-3 mt-2 border-2 border-gray-300 focus:border-green-500 focus:ring focus:ring-green-300 rounded-lg shadow-sm transition-all"
         />
-
+  
         <a
           id="whatsappLink"
-          href={`https://wa.me/${whatsappNumber}?text=Hola,%20estoy%20interesado%20en%20${servicio.nombre}%20por%20${servicio.precio}.%20Respuesta:%20${respuesta}.%20¿Cómo%20puedo%20gestionar%20mi%20compra?`}
+          href={`https://wa.me/${whatsappNumber}?text=Hola,%20estoy%20interesado%20en%20${servicio.nombre}%20por%20${servicio.precio}.%20¿Cómo%20puedo%20gestionar%20mi%20compra?`}
           target="_blank"
           rel="noopener noreferrer"
-          class="w-full flex justify-center items-center gap-2 bg-green-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-700 transition-transform transform hover:scale-105 hover:shadow-xl"
+          class="w-full flex justify-center items-center gap-2 bg-green-500 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-green-600 transition-transform transform hover:scale-105 hover:shadow-xl mt-4"
         >
-          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-          Comprar por WhatsApp
+          <i class="fa fa-shopping-cart text-xl"></i>
+          Cotizar por WhatsApp
         </a>
-
-        
       </div>
     </div>
   </section>
+  
 
   <Footer />
 </Layout>
