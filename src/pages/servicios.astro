@@ -26,15 +26,18 @@ const serviciosArray = Object.entries(servicios).map(([slug, data]) => ({
   <section class="container mx-auto py-8">
     <h1 class="text-3xl  text-gray-600 font-bold text-center mb-6">Encuentra tu servicio</h1>
 
-    <!-- Barra de búsqueda -->
-    <div class="mb-6 text-center">
-      <input 
-        type="text"
-        id="busqueda"
-        placeholder="Buscar servicio..."
-        class="px-4 py-2 border  rounded-lg w-1/2"
-      />
-    </div>
+    <!-- Barra de búsqueda mejorada -->
+<div class="mb-6 text-center">
+  <input 
+    type="text"
+    id="busqueda"
+    placeholder="Buscar servicio..."
+    class="px-4 py-3 border-2 border-gray-300 rounded-xl w-1/2 shadow-md 
+           focus:border-yellow-500 focus:ring focus:ring-yellow-300 
+           placeholder-yellow-400 text-gray-700"
+  />
+</div>
+
 
     <!-- Contenedor de servicios -->
     <div id="servicios-container" class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8">
