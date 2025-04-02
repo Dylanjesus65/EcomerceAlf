@@ -1,8 +1,8 @@
 ---
 const { servicio } = Astro.props;
 ---
-
-<div class="relative bg-white shadow-xl rounded-lg p-4 text-center transition-transform transform hover:scale-105 hover:shadow-2xl flex flex-col h-full before:absolute before:top-0 before:left-0 before:w-full before:h-2 before:bg-black/5 before:rounded-t-lg">
+<a href={`/servicios/${servicio.slug}`}>
+<div  class="relative bg-white shadow-xl rounded-lg p-4 text-center transition-transform transform hover:scale-105 hover:shadow-2xl flex flex-col h-full before:absolute before:top-0 before:left-0 before:w-full before:h-2 before:bg-black/5 before:rounded-t-lg">
   
   <img src={servicio.imagen} alt={servicio.nombre} class="w-full h-40 object-cover rounded-t-lg" />
   
@@ -16,3 +16,4 @@ const { servicio } = Astro.props;
   </a>
 
 </div>
+</a>
