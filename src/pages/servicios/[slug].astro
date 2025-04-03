@@ -18,9 +18,6 @@ if (!servicio) {
 }
 
 const whatsappNumber = "593992738731";
-let respuesta = "";
-
-
 ---
 
 <Layout>
@@ -28,34 +25,37 @@ let respuesta = "";
 
   <section class="container mx-auto px-6 py-20 flex-grow bg-white shadow-lg rounded-xl">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-      <!-- Imagen del Servicio -->
-      <div class="rounded-xl overflow-hidden shadow-xl">
-        <img src={servicio.imagen} alt={servicio.nombre} class="w-full h-auto object-cover rounded-xl"/>
+      <div class="rounded-xl overflow-hidden shadow-2xl shadow-[rgba(0,0,255,0.4)] hover:shadow-[rgba(0,0,255,0.7)] transition-shadow duration-300 ring-blue-500 ring-opacity-50">
+        <img
+          src={servicio.imagen}
+          alt={servicio.nombre}
+          class="w-full h-auto object-cover rounded-xl"
+        />
       </div>
-  
-      <!-- Detalles del Servicio -->
+      
+
       <div class="text-left">
         <span class="bg-green-200 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Oferta</span>
-        <h1 class="text-3xl font-bold mt-2">{servicio.nombre}</h1>
-  
+        <h1 id="nombre_serv" class="text-3xl font-bold mt-2">{servicio.nombre}</h1>
+
         <div class="mt-6 p-4 bg-gray-100 rounded-lg shadow-md">
           <h2 class="text-lg font-semibold cursor-pointer">Descripción</h2>
           <p class="text-gray-600 mt-2">{servicio.descripcion}</p>
         </div>
-  
+
         
-  
-        <label for="respuesta" class="block mt-4 text-lg font-medium">{servicio.pregunta}</label>
+
+        <label for="respuesta" class="block mt-4 text-lg font-medium" id="pregunta_serv">{servicio.pregunta}</label>
         <input
           id="respuesta"
           type="text"
           placeholder="Escribe tu respuesta aquí..."
           class="w-full p-3 mt-2 border-2 border-gray-300 focus:border-green-500 focus:ring focus:ring-green-300 rounded-lg shadow-sm transition-all"
         />
-  
+
         <a
           id="whatsappLink"
-          href={`https://wa.me/${whatsappNumber}?text=Hola,%20estoy%20interesado%20en%20${servicio.nombre}%20por%20${servicio.precio}.%20¿Cómo%20puedo%20gestionar%20mi%20compra?`}
+          href={`https://wa.me/${whatsappNumber}?text=Hola,%20estoy%20interesado%20en%20${servicio.nombre}%20por%20${servicio.precio}.%20Respuesta:%20¿Cómo%20puedo%20gestionar%20mi%20compra?`}
           target="_blank"
           rel="noopener noreferrer"
           class="w-full flex justify-center items-center gap-2 bg-green-500 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-green-600 transition-transform transform hover:scale-105 hover:shadow-xl mt-4"
@@ -66,37 +66,41 @@ let respuesta = "";
       </div>
     </div>
   </section>
-  
 
   <Footer />
 </Layout>
 
 <script>
   const whatsappNumber = "593992738731";
-  const respuestaInput = document.getElementById(
-    "respuesta"
-  ) as HTMLInputElement;
-  const nombreServ = document.getElementById(
-    "nombre_serv"
-  ) as HTMLElement;
-  const nombre = nombreServ.textContent?.trim() || "";
-  const precioServ = document.getElementById(
-    "precio_serv"
-  ) as HTMLElement;
-  const precio = precioServ.textContent?.trim() || "";
-  const preguntServ = document.getElementById(
-    "pregunta_serv"
-  ) as HTMLElement;
-  const pregunta = preguntServ.textContent?.trim() || "";
-  const whatsappLink = document.getElementById(
-    "whatsappLink"
-  ) as HTMLAnchorElement;
+  const respuestaInput = document.getElementById("respuesta") as HTMLInputElement | null;
+  const nombreServElement = document.getElementById("nombre_serv");
+  const precioServElement = document.getElementById("precio_serv");
+  const preguntaServElement = document.getElementById("pregunta_serv");
+  const whatsappLinkElement = document.getElementById("whatsappLink") as HTMLAnchorElement | null;
 
-  respuestaInput.addEventListener("input", () => {
-    let respuesta = respuestaInput.value;
-    whatsappLink.href = `https://wa.me/${whatsappNumber}?text=Hola,%20estoy%20interesado%20en%20${nombre}%20por%20${precio}.%20${pregunta}%20${respuesta}.%20¿Cómo%20puedo%20gestionar%20mi%20compra?`;
+  const nombre = nombreServElement?.textContent?.trim() || "";
+  const precio = precioServElement?.textContent?.trim() || "";
+  const pregunta = preguntaServElement?.textContent?.trim() || "";
+
+  if (respuestaInput && whatsappLinkElement) {
+    respuestaInput.addEventListener("input", () => {
+      const respuesta = respuestaInput.value || "";
+      whatsappLinkElement.href = `https://wa.me/${whatsappNumber}?text=Hola,%20estoy%20interesado%20en%20${nombre}%20por%20${precio}.%20${pregunta}%20${respuesta}.%20¿Cómo%20puedo%20gestionar%20mi%20compra?`;
+    });
+
+    // Inicializa el enlace sin respuesta (opcional, ya que el href inicial en el HTML ya tiene esta base)
+    whatsappLinkElement.href = `https://wa.me/${whatsappNumber}?text=Hola,%20estoy%20interesado%20en%20${nombre}%20por%20${precio}.%20¿Cómo%20puedo%20gestionar%20mi%20compra?`;
+  }
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const preloader = document.getElementById("preloader");
+    if (preloader) {
+      preloader.style.opacity = "0";
+      setTimeout(() => {
+        preloader.style.display = "none";
+      }, 500);
+    }
   });
-
-  // Actualiza el enlace inicial con la respuesta vacía
-  whatsappLink.href = `https://wa.me/${whatsappNumber}?text=Hola,%20estoy%20interesado%20en%20${nombre}%20por%20${precio}.%20Respuesta:%20¿Cómo%20puedo%20gestionar%20mi%20compra?`;
 </script>
