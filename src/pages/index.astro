@@ -11,19 +11,25 @@ import Footer from '../components/Footer.astro';
   <section class="relative bg-gray-900 text-white text-center py-32">
     <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/hero-bg.jpg'); opacity: 0.3;"></div>
     <div class="relative z-10">
-      <h1 class="text-5xl font-bold">Impulsa tu negocio con tecnología</h1>
-      <p class="text-xl mt-4 text-gray-300">Creamos soluciones digitales innovadoras para tu empresa</p>
-      <a href="/contacto" class="mt-6 inline-block bg-orange-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-700">
-        Contáctanos
-      </a>
+        <div class="max-w-3xl mx-auto"> <!- Contenedor con ancho máximo -->
+            <h1 class="text-5xl font-bold">Somos tu socio estratégico</h1>
+            <p class="text-xl mt-4 text-gray-300 text-center md:text-justify">
+                En Seguridad y Salud somos tu socio estratégico que además de brindarte asesoría,
+                realizamos un acompañamiento personalizado e integral.
+                Al ser parte de tu empresa o negocio podrás ver notablemente los cambios en tu entorno laboral,
+                 reduciendo así tu inversión en seguridad y salud para priorizarla en tu verdadera necesidad con sustento técnico.</p>
+            <a href="/contacto" class="mt-6 inline-block bg-orange-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-700">
+                Contáctanos
+            </a>
+        </div>
     </div>
-  </section>
+</section>
 
   <!-- Sobre Nosotros -->
   <section class="py-20 container mx-auto text-center">
     <h2 class="text-4xl font-bold text-gray-900">¿Quiénes Somos?</h2>
     <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
-      Somos un equipo apasionado por la tecnología, ayudando a empresas a crecer con soluciones digitales innovadoras.
+      En Seguridad y Salud somos tu socio estratégico que además de brindarte asesoría, realizamos un acompañamiento personalizado e integral.
     </p>
   </section>
 
@@ -33,17 +39,17 @@ import Footer from '../components/Footer.astro';
       <h2 class="text-4xl font-bold text-gray-900">¿Por qué elegirnos?</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
         <div class="p-6 bg-white shadow-lg rounded-lg">
-          <img src="/icon-innovacion.png" class="w-16 mx-auto mb-4" alt="Innovación" />
+          <img src="/public/rocket-innovation-space-svgrepo-com (1).svg" class="w-16 mx-auto mb-4" alt="Innovación" />
           <h3 class="text-xl font-semibold">Innovación</h3>
           <p class="text-gray-600">Usamos las últimas tecnologías para garantizar soluciones modernas y eficientes.</p>
         </div>
         <div class="p-6 bg-white shadow-lg rounded-lg">
-          <img src="/icon-calidad.png" class="w-16 mx-auto mb-4" alt="Calidad" />
+          <img src="/public/quality-svgrepo-com.svg" class="w-16 mx-auto mb-4" alt="Calidad" />
           <h3 class="text-xl font-semibold">Calidad</h3>
           <p class="text-gray-600">Nuestros proyectos cumplen con altos estándares de calidad y rendimiento.</p>
         </div>
         <div class="p-6 bg-white shadow-lg rounded-lg">
-          <img src="/icon-soporte.png" class="w-16 mx-auto mb-4" alt="Soporte" />
+          <img src="/public/support-svgrepo-com.svg" class="w-16 mx-auto mb-4" alt="Soporte" />
           <h3 class="text-xl font-semibold">Soporte 24/7</h3>
           <p class="text-gray-600">Siempre estamos disponibles para ayudarte con cualquier duda o problema.</p>
         </div>
@@ -51,20 +57,7 @@ import Footer from '../components/Footer.astro';
     </div>
   </section>
 
-  <!-- Testimonios -->
-  <section class="py-20 container mx-auto text-center">
-    <h2 class="text-4xl font-bold text-gray-900">Lo que dicen nuestros clientes</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
-      <div class="bg-white shadow-lg rounded-lg p-6">
-        <p class="text-gray-700 italic">"Increíble servicio, nos ayudaron a digitalizar nuestro negocio y ahora vendemos más que nunca."</p>
-        <h3 class="mt-4 font-semibold">- Alex Freire, CEO de Empresa</h3>
-      </div>
-      <div class="bg-white shadow-lg rounded-lg p-6">
-        <p class="text-gray-700 italic">"Gran equipo, siempre atentos y con soluciones efectivas. Recomendado al 100%."</p>
-        <h3 class="mt-4 font-semibold">- María Gómez, Directora de Marketing</h3>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- CTA Final -->
   <section class="text-center py-20 bg-gray-900 text-white">
