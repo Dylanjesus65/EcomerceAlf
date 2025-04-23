@@ -1,47 +1,112 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
 
-// No es necesario importar nada en este componente
-
+const currentPath = Astro.url.pathname;
 ---
+
 <Layout>
-  <header class="flex flex-col md:flex-row space-x-0 md:space-x-8 bg-white-400 text-yellow-500 py-4">
-    <div class="container mx-auto flex justify-between items-center px-4">
-        <a href="/" class="flex text-xl font-bold max-w-[150px]">
-            <img src="/logo2.png" alt="Logo" class="h-10 w-full object-contain" />
-        </a>
-        <button class="md:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-        </button>
-        <nav class="hidden md:flex">
-            <ul class="flex space-x-8">
-                <li><a href="/" class="hover:text-blue-300">Home</a></li>
-                <li><a href="/servicios" class="hover:text-blue-300">Servicios</a></li>
-                <li><a href="/nosotros" class="hover:text-blue-300">Acerca de Nosotros</a></li>
-                <li><a href="/contacto" class="hover:text-blue-300">Contacto</a></li>
-            </ul>
-        </nav>
-        <ul id="mobile-menu" class="hidden flex-col absolute top-full left-0 w-full bg-white shadow-md rounded-b-md">
-            <li><a href="/" class="block py-2 px-4 hover:bg-gray-100">Home</a></li>
-            <li><a href="/servicios" class="block py-2 px-4 hover:bg-gray-100">Servicios</a></li>
-            <li><a href="/nosotros" class="block py-2 px-4 hover:bg-gray-100">Acerca de Nosotros</a></li>
-            <li><a href="/contacto" class="block py-2 px-4 hover:bg-gray-100">Contacto</a></li>
-        </ul>
+  <div class="w-full bg-[#1D2327] text-white text-sm py-6 px-4">
+    <div class="max-w-[1900px] mx-auto flex justify-between items-center">
+      <a href="/" class="flex items-center">
+        <img src="/logo2.png" alt="Logo" class="h-8 mr-4" />
+        <span class="font-semibold text-lg"></span>
+      </a>
+
+      <div class="flex items-center space-x-6">
+        <div class="flex items-center">
+            <img src="icons/iso.svg" alt="Logo" class="h-8 mr-4" />
+          <span class="ml-1">Certificación ISO 9001</span>
+        </div>
+        <div class="flex items-center">
+            <img src="icons/24h.svg" alt="Logo" class="h-8 mr-4" />
+          <span class="ml-1">Servicio 24/7</span>
+        </div>
+        <div class="flex items-center">
+            <img src="icons/check.svg" alt="Logo" class="h-8 mr-4" />
+          <span class="ml-1">Personal Calificado</span>
+        </div>
+      </div>
     </div>
-</header>
+  </div>
+
+  <header class="sticky top-0 z-50 w-full bg-white shadow-md">
+    <div class="max-w-[1600px] mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="/" class="flex text-2xl font-bold max-w-[160px]">
+        <img src="/logo2.png" alt="Logo" class="h-12 w-full object-contain" />
+      </a>
+
+      <button class="md:hidden" id="menu-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-7 h-7 text-[#1D2327]"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </button>
+
+      <nav class="hidden md:flex space-x-10 text-[#1D2327] font-semibold text-lg">
+        <a href="/" class={`hover:text-[#F5B117] nav-link-desktop ${currentPath === '/' ? 'active-link' : ''}`}>Inicio</a>
+        <a href="/nosotros" class={`hover:text-[#F5B117] nav-link-desktop ${currentPath === '/nosotros' ? 'active-link' : ''}`}>¿Quiénes Somos?</a>
+        <a href="/contacto" class={`hover:text-[#F5B117] nav-link-desktop ${currentPath === '/contacto' ? 'active-link' : ''}`}>Contacto</a>
+        <a href="/servicios" class={`hover:text-[#F5B117] nav-link-desktop ${currentPath === '/servicios' ? 'active-link' : ''}`}>Servicios</a>
+      </nav>
+    </div>
+
+    <ul id="mobile-menu" class="hidden md:hidden flex-col bg-white shadow-md">
+      <li><a href="/" class="block py-2 px-4 hover:bg-gray-100">Inicio</a></li>
+      <li><a href="/servicios" class="block py-2 px-4 hover:bg-gray-100">Servicios</a></li>
+      <li><a href="/nosotros" class="block py-2 px-4 hover:bg-gray-100">Nosotros</a></li>
+      <li><a href="/contacto" class="block py-2 px-4 hover:bg-gray-100">Contacto</a></li>
+    </ul>
+  </header>
 
   <script>
-        const menuButton = document.querySelector('button');
-        const mobileMenu = document.getElementById('mobile-menu');
+    const btn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (btn && mobileMenu) {
+      btn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
 
-        if (menuButton && mobileMenu) {
-            menuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-    </script>
+  <style>
+    .nav-link-desktop {
+      position: relative;
+      text-decoration: none;
+      padding-bottom: 0.25rem; /* Espacio para la barra */
+    }
+
+    .nav-link-desktop::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 4px; /* Grosor de la barra */
+      background-color: #F5B117; /* Color de la barra */
+      transition: width 0.3s ease-in-out;
+    }
+
+    .nav-link-desktop:hover::after,
+    .nav-link-desktop:focus::after,
+    .nav-link-desktop:active::after {
+      width: 100%;
+      height: 4px; /* Barra más gruesa al interactuar */
+    }
+
+    /* Estilo para el enlace activo */
+    .active-link::after {
+      width: 100%; /* La barra siempre está visible */
+      height: 4px; /* Barra más gruesa para el activo */
+    }
+  </style>
 </Layout>
-
-  
