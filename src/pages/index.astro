@@ -1,7 +1,7 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
@@ -9,196 +9,558 @@ import Footer from '../components/Footer.astro';
 
   <!-- Sección Hero -->
   <section class="relative bg-gray-900 text-white text-center py-32">
-    <div class="absolute inset-0 bg-cover bg-center "></div>
+    <div class="absolute inset-0 bg-cover bg-center"></div>
     <div class="relative z-10">
-        <div class="max-w-3xl mx-auto"> <!- Contenedor con ancho máximo -->
-            <h1 class=" text-[#F5B117] text-5xl text- font-bold ">Somos tu socio estratégico</h1>
-            <p class="text-xl text-gray-300 mt-4 max-w-2xl mx-auto">
-                En Seguridad y Salud somos tu socio estratégico que además de brindarte asesoría,
-                realizamos un acompañamiento personalizado e integral.
-                Al ser parte de tu empresa o negocio podrás ver notablemente los cambios en tu entorno laboral,
-                 reduciendo así tu inversión en seguridad y salud para priorizarla en tu verdadera necesidad con sustento técnico.</p>
-            
-        </div>
+      <div class="max-w-3xl mx-auto">
+        <!--- Contenedor con ancho máximo ---->
+        <h1 class="text-[#F5B117] text-5xl text- font-bold">
+          Somos tu socio estratégico
+        </h1>
+        <p class="text-xl text-gray-300 mt-4 max-w-2xl mx-auto">
+          En Seguridad y Salud somos tu socio estratégico que además de
+          brindarte asesoría, realizamos un acompañamiento personalizado e
+          integral. Al ser parte de tu empresa o negocio podrás ver notablemente
+          los cambios en tu entorno laboral, reduciendo así tu inversión en
+          seguridad y salud para priorizarla en tu verdadera necesidad con
+          sustento técnico.
+        </p>
+      </div>
     </div>
-</section>
+  </section>
 
- <!-- Tarjetas -->
- <section class="py-16 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+  <!-- Tarjetas -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Tarjeta 1: Compromiso -->
+        <div
+          class="relative group w-full rounded-2xl overflow-hidden shadow-xl h-[580px] border border-transparent hover:border-[#fbbf24] transition-all duration-500 ease-in-out"
+        >
+          <img
+            src="web/compromiso.jpg"
+            alt="Compromiso"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-in-out group-hover:scale-110"
+          />
+          <div
+            class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-[#0b1e37]/90 to-[#0b1e37]/30 md:backdrop-blur-sm z-10
+            transition-opacity duration-1000 ease-in-out
+            opacity-100 md:opacity-0 group-hover:opacity-100"
+          >
+            <div
+              class="text-center px-6 transform md:translate-y-10 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700 ease-in-out"
+            >
+              <h3 class="text-white text-3xl font-bold mb-4">Compromiso</h3>
+              <p class="text-gray-200 mb-8 text-base">
+                Nos involucramos en cada proyecto con responsabilidad y
+                profesionalismo.
+              </p>
+              <a
+                href="#"
+                class="inline-block text-[#fbbf24] font-semibold text-base border border-[#fbbf24] px-5 py-2.5 rounded-full hover:bg-[#fbbf24] hover:text-[#0b1e37] transition duration-300 animate-bounce"
+              >
+                Sobre Nosotros
+              </a>
+            </div>
+          </div>
+        </div>
 
-      <!-- Tarjeta genérica -->
-      <div class="relative group w-full rounded-2xl overflow-hidden shadow-xl min-h-[580px] transition-all duration-700 ease-in-out border border-transparent hover:border-[#fbbf24]">
-        <img src="web/compromiso.jpg" alt="Imagen 1" class="w-full h-full object-cover absolute inset-0 transition-transform duration-1000 ease-in-out group-hover:scale-110" />
-        
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0b1e37]/90 to-[#0b1e37]/30 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-1000 ease-in-out z-10 flex items-center justify-center">
-          <div class="text-center px-6 transform translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-1000 ease-in-out">
-            <h3 class="text-white text-3xl font-bold mb-4">Compromiso</h3>
-            <p class="text-gray-200 mb-8 text-base">Nos involucramos en cada proyecto con responsabilidad y profesionalismo.</p>
-            <a href="#" class="mx-auto inline-block text-[#fbbf24] font-semibold text-base border border-[#fbbf24] px-5 py-2.5 rounded-full hover:bg-[#fbbf24] hover:text-[#0b1e37] transition-all duration-300 ease-in-out animate-bounce">
-              Sobre Nosotros
-            </a>
+        <!-- Tarjeta 2: Honestidad -->
+        <div
+          class="relative group w-full rounded-2xl overflow-hidden shadow-xl h-[580px] border border-transparent hover:border-[#fbbf24] transition-all duration-500 ease-in-out"
+        >
+          <img
+            src="web/honestidad.jpg"
+            alt="Honestidad"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-in-out group-hover:scale-110"
+          />
+          <div
+            class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-[#0b1e37]/90 to-[#0b1e37]/30 md:backdrop-blur-sm z-10
+            transition-opacity duration-1000 ease-in-out
+            opacity-100 md:opacity-0 group-hover:opacity-100"
+          >
+            <div
+              class="text-center px-6 transform md:translate-y-10 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700 ease-in-out"
+            >
+              <h3 class="text-white text-3xl font-bold mb-4">Honestidad</h3>
+              <p class="text-gray-200 mb-8 text-base">
+                En todas las etapas del proceso te acompañamos con transparencia
+                y claridad.
+              </p>
+              <a
+                href="#"
+                class="inline-block text-[#fbbf24] font-semibold text-base border border-[#fbbf24] px-5 py-2.5 rounded-full hover:bg-[#fbbf24] hover:text-[#0b1e37] transition duration-300 animate-bounce"
+              >
+                Sobre Nosotros
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3: Trabajo en equipo -->
+        <div
+          class="relative group w-full rounded-2xl overflow-hidden shadow-xl h-[580px] border border-transparent hover:border-[#fbbf24] transition-all duration-500 ease-in-out"
+        >
+          <img
+            src="web/trabajoequipo.jpg"
+            alt="Trabajo en equipo"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-in-out group-hover:scale-110"
+          />
+          <div
+            class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-[#0b1e37]/90 to-[#0b1e37]/30 md:backdrop-blur-sm z-10
+        transition-opacity duration-1000 ease-in-out
+        opacity-100 md:opacity-0 group-hover:opacity-100"
+          >
+            <div
+              class="text-center px-6 transform md:translate-y-10 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700 ease-in-out"
+            >
+              <h3 class="text-white text-3xl font-bold mb-4">
+                Trabajo en equipo
+              </h3>
+              <p class="text-gray-200 mb-8 text-base">
+                Logramos mejores resultados cuando colaboramos con nuestros
+                clientes y aliados.
+              </p>
+              <a
+                href="#"
+                class="inline-block text-[#fbbf24] font-semibold text-base border border-[#fbbf24] px-5 py-2.5 rounded-full hover:bg-[#fbbf24] hover:text-[#0b1e37] transition duration-300 animate-bounce"
+              >
+                Sobre Nosotros
+              </a>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Tarjeta 2 -->
-      <div class="relative group w-full rounded-2xl overflow-hidden shadow-xl min-h-[580px] transition-all duration-700 ease-in-out border border-transparent hover:border-[#fbbf24]">
-        <img src="web/honestidad.jpg" alt="Imagen 2" class="w-full h-full object-cover absolute inset-0 transition-transform duration-1000 ease-in-out group-hover:scale-110" />
-        
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0b1e37]/90 to-[#0b1e37]/30 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-1000 ease-in-out z-10 flex items-center justify-center">
-          <div class="text-center px-6 transform translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-1000 ease-in-out">
-            <h3 class="text-white text-3xl font-bold mb-4">Honestidad</h3>
-            <p class="text-gray-200 mb-8 text-base">En todas las etapas del proceso te acompañamos con transparencia y claridad.</p>
-            <a href="#" class="mx-auto inline-block text-[#fbbf24] font-semibold text-base border border-[#fbbf24] px-5 py-2.5 rounded-full hover:bg-[#fbbf24] hover:text-[#0b1e37] transition-all duration-300 ease-in-out animate-bounce">
-              Sobre Nosotros
-            </a>
+  <!-- Seccion de Cajas -->
+  <h1 class="text-gray-900 text-5xl text- font-bold text-center">
+    Principales Beneficios
+  </h1>
+  <section
+    class="relative h-auto bg-cover bg-center bg-no-repeat"
+    style="background-image: url('web/background2.jpg')"
+  >
+    <!-- Overlay azul translúcido con blur -->
+    <div class="absolute inset-0 bg-[#101828]/80 z-0"></div>
+
+    <!-- Contenido principal (tarjetas) -->
+    <div
+      class="relative z-10 max-w-6xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-3 gap-6"
+    >
+      <!-- Caja 1 -->
+      <div
+        class="bg-white text-center p-6 shadow-lg transition hover:scale-105"
+      >
+        <!-- Icono -->
+        <div class="flex justify-center mb-4">
+          <svg
+            class="w-10 h-10 text-blue-900"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9.75 12l.75 9m3-9l-.75 9M4.5 12h15m-15 0l1.5-9h12l1.5 9"
+            ></path>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold">ASESORÍA TÉCNICA</h3>
+        <p class="text-sm mt-2">ALF Seguridad y Salud</p>
+      </div>
+
+      <!-- Caja 2 -->
+      <div
+        class="bg-blue-900/50 text-white text-center p-6 shadow-lg transition hover:scale-105"
+      >
+        <div class="flex justify-center mb-4">
+          <svg
+            class="w-10 h-10 text-white"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 3v18h18V3H3z"></path>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold">GUÍA PARA INVERSIÓN ADECUADA</h3>
+        <p class="text-sm mt-2">ALF Seguridad y Salud</p>
+      </div>
+
+      <!-- Caja 3 -->
+      <div
+        class="bg-white text-center p-6 shadow-lg transition hover:scale-105"
+      >
+        <div class="flex justify-center mb-4">
+          <svg
+            class="w-10 h-10 text-blue-900"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M11 11V3h2v8h3l-4 4-4-4h3z"></path>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold">MEDICIÓN DE RIESGOS</h3>
+        <p class="text-sm mt-2">ALF Seguridad y Salud</p>
+      </div>
+
+      <!-- Caja 4 -->
+      <div
+        class="bg-blue-900/50 text-white text-center p-6 shadow-lg transition hover:scale-105"
+      >
+        <div class="flex justify-center mb-4">
+          <svg
+            class="w-10 h-10 text-white"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3"
+            ></path>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold">CAPACITACIÓN CERTIFICADA</h3>
+        <p class="text-sm mt-2">ALF Seguridad y Salud</p>
+      </div>
+
+      <!-- Caja 5 -->
+      <div
+        class="bg-white text-center p-6 shadow-lg transition hover:scale-105"
+      >
+        <div class="flex justify-center mb-4">
+          <svg
+            class="w-10 h-10 text-blue-900"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M5 13l4 4L19 7"></path>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold">SEGUIMIENTO MÉDICO</h3>
+        <p class="text-sm mt-2">ALF Seguridad y Salud</p>
+      </div>
+
+      <!-- Caja 6 -->
+      <div
+        class="bg-blue-900/50 text-white text-center p-6 shadow-lg transition hover:scale-105"
+      >
+        <div class="flex justify-center mb-4">
+          <svg
+            class="w-10 h-10 text-white"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 4v16m8-8H4"></path>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold">OTRO SERVICIO</h3>
+        <p class="text-sm mt-2">ALF Seguridad y Salud</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-gray-50">
+    {/* Sección principal con padding y un fondo muy claro */}
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
+    >
+      {
+        /* Contenedor principal con disposición en cuadrícula en pantallas grandes */
+      }
+
+      {/* Columna de la imagen */}
+      <div
+        class="rounded-lg overflow-hidden shadow-md"
+        style="border: 1px solid #fbbf24;"
+      >
+        <img
+          src="web/background2.jpg"
+          alt="Personas trabajando"
+          class="w-full h-auto"
+        />
+      </div>
+
+      {/* Columna del texto */}
+      <div>
+        <h3
+          class="text-sm text-gray-500 uppercase tracking-wider font-semibold"
+        >
+          CONSULTING SERVICES FOR INDUSTRIES
+        </h3>
+        <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl mt-2">
+          Servimos como consultores para todas las necesidades de tu empresa.
+        </h2>
+        <p class="mt-4 text-lg text-gray-700">
+          Contamos con precios especiales y descuentos para PYMES y para
+          empresas donantes.
+        </p>
+
+        {/* Cuadrícula de servicios */}
+        <div class="mt-8 grid grid-cols-2 gap-4">
+          <div
+            class="bg-white rounded-md p-6 flex items-center space-x-3 shadow-sm"
+          >
+            <div
+              class="w-8 h-8 bg-yellow-100 text-yellow-500 rounded-full flex items-center justify-center"
+            >
+              {/* Aquí puedes poner un icono SVG o un carácter */}
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.808 5c-1.657 0-2.825.892-3.075 2.185a48.35 48.35 0 00-.05 15.623m7.442-17.797a48.338 48.338 0 00-.05-15.623C13.154 5.477 14.74 5 16.192 5c1.657 0 2.825.892 3.075 2.185a48.35 48.35 0 01.05 15.623m-7.442-17.797c-1.657 0-2.825.892-3.075 2.185a48.35 48.35 0 00-.05 15.623m7.442-17.797c1.657 0 2.825.892 3.075 2.185a48.338 48.338 0 01.05 15.623"
+                ></path></svg
+              >
+            </div>
+            <p class="font-medium text-gray-700">MEDICIÓN DE RIESGOS</p>
+          </div>
+          <div
+            class="bg-white rounded-md p-6 flex items-center space-x-3 shadow-sm"
+          >
+            <div
+              class="w-8 h-8 bg-yellow-100 text-yellow-500 rounded-full flex items-center justify-center"
+            >
+              {/* Otro icono */}
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"></path></svg
+              >
+            </div>
+            <p class="font-medium text-gray-700">CAPACITACIÓN CERTIFICADA</p>
+          </div>
+          <div
+            class="bg-white rounded-md p-6 flex items-center space-x-3 shadow-sm"
+          >
+            <div
+              class="w-8 h-8 bg-yellow-100 text-yellow-500 rounded-full flex items-center justify-center"
+            >
+              {/* Otro icono */}
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg
+              >
+            </div>
+            <p class="font-medium text-gray-700">TRABAJO PERSONALIZADO</p>
+          </div>
+          <div
+            class="bg-white rounded-md p-6 flex items-center space-x-3 shadow-sm"
+          >
+            <div
+              class="w-8 h-8 bg-yellow-100 text-yellow-500 rounded-full flex items-center justify-center"
+            >
+              {/* Otro icono */}
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 20l4-16m0 0l4 4-4 4M10 20l-4-4 4-4m-4 0l4-16"
+                ></path></svg
+              >
+            </div>
+            <p class="font-medium text-gray-700">DOCUMENTOS TÉCNICOS</p>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Tarjeta 3 -->
-      <div class="relative group w-full rounded-2xl overflow-hidden shadow-xl min-h-[580px] transition-all duration-700 ease-in-out border border-transparent hover:border-[#fbbf24]">
-        <img src="web/trabajoequipo.jpg" alt="Imagen 3" class="w-full h-full object-cover absolute inset-0 transition-transform duration-1000 ease-in-out group-hover:scale-110" />
-        
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0b1e37]/90 to-[#0b1e37]/30 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-1000 ease-in-out z-10 flex items-center justify-center">
-          <div class="text-center px-6 transform translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-1000 ease-in-out">
-            <h3 class="text-white text-3xl font-bold mb-4">Trabajo en equipo</h3>
-            <p class="text-gray-200 mb-8 text-base">Logramos mejores resultados cuando colaboramos con nuestros clientes y aliados.</p>
-            <a href="#" class="mx-auto inline-block text-[#fbbf24] font-semibold text-base border border-[#fbbf24] px-5 py-2.5 rounded-full hover:bg-[#fbbf24] hover:text-[#0b1e37] transition-all duration-300 ease-in-out animate-bounce">
-              Sobre Nosotros
-            </a>
-          </div>
+  <!-- Seccion con javascript -->
+  <section class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-xl font-semibold text-gray-500 uppercase tracking-wider mb-6">DESARROLLANDO UNA EXPERIENCIA FIRME</h2>
+      <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+        <div>
+          <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Soluciones efectivas para mejoras en los procesos</h2>
+          <p class="mt-4 text-lg text-gray-700">Como adicional pero muy importante, puedes tener la confianza que nuestros años de experiencia y sólido respaldo plasmados en documentación técnica que con gusto serán gratuitamente compartidos.</p>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-md">
+          <img src="web/web2.png" alt="Equipo de trabajo" class="w-full h-auto" />
         </div>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<section class="relative h-auto bg-cover bg-center bg-no-repeat" style="background-image: url('web/background2.jpg')">
-  <!-- Overlay azul translúcido con blur -->
-  <div class="absolute inset-0 bg-[#101828]/80 z-0"></div>
-
-  <!-- Contenido principal (tarjetas) -->
-  <div class="relative z-10 max-w-6xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-    <!-- Caja 1 -->
-    <div class="bg-white text-center p-6 shadow-lg transition hover:scale-105">
-      <!-- Icono -->
-      <div class="flex justify-center mb-4">
-        <svg class="w-10 h-10 text-blue-900" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 12l.75 9m3-9l-.75 9M4.5 12h15m-15 0l1.5-9h12l1.5 9" />
-        </svg>
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center" id="counters-section">
+        <div>
+          <div class="font-extrabold text-4xl text-[#fbbf24] counter" data-final="12" data-animated="false">0</div>
+          <p class="mt-2 text-sm text-gray-500 font-bold">Años de experiencia</p>
+        </div>
+        <div>
+          <div class="font-extrabold text-4xl text-[#fbbf24] counter" data-final="30" data-animated="false">0+</div>
+          <p class="mt-2 text-sm text-gray-500 font-bold">Años de experiencia</p>
+        </div>
+        <div>
+          <div class="font-extrabold text-4xl text-[#fbbf24] counter" data-final="400" data-animated="false">0</div>
+          <p class="mt-2 text-sm text-gray-500 font-bold">Años de experiencia</p>
+        </div>
+        <div>
+          <div class="font-extrabold text-4xl text-[#fbbf24] counter" data-final="100" data-animated="false">0</div>
+          <p class="mt-2 text-sm text-gray-500 font-bold">Años de experiencia</p>
+        </div>
       </div>
-      <h3 class="text-lg font-bold">ASESORÍA TÉCNICA</h3>
-      <p class="text-sm mt-2">ALF Seguridad y Salud</p>
     </div>
+  </section>
 
-    <!-- Caja 2 -->
-    <div class="bg-blue-900/50 text-white  text-center p-6 shadow-lg transition hover:scale-105">
-      <div class="flex justify-center mb-4">
-        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v18h18V3H3z" />
-        </svg>
-      </div>
-      <h3 class="text-lg font-bold">GUÍA PARA INVERSIÓN ADECUADA</h3>
-      <p class="text-sm mt-2">ALF Seguridad y Salud</p>
-    </div>
+  <script>
+    function animateCounter(element: HTMLElement, finalCount: number) {
+  let count = parseInt(element.textContent ?? '0');
+  if (count >= finalCount) return;
 
-    <!-- Caja 3 -->
-    <div class="bg-white text-center p-6 shadow-lg transition hover:scale-105">
-      <div class="flex justify-center mb-4">
-        <svg class="w-10 h-10 text-blue-900" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M11 11V3h2v8h3l-4 4-4-4h3z" />
-        </svg>
-      </div>
-      <h3 class="text-lg font-bold">MEDICIÓN DE RIESGOS</h3>
-      <p class="text-sm mt-2">ALF Seguridad y Salud</p>
-    </div>
+  const duration = 2000;
+  const increment = Math.ceil(finalCount / (duration / 16));
 
-    <!-- Caja 4 -->
-    <div class="bg-blue-900/50 text-white  text-center p-6 shadow-lg transition hover:scale-105">
-      <div class="flex justify-center mb-4">
-        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3" />
-        </svg>
-      </div>
-      <h3 class="text-lg font-bold">CAPACITACIÓN CERTIFICADA</h3>
-      <p class="text-sm mt-2">ALF Seguridad y Salud</p>
-    </div>
+  function updateCounter() {
+    count += increment;
+    element.textContent = count > finalCount ? finalCount.toString() : count.toString();
+    if (count < finalCount) {
+      requestAnimationFrame(updateCounter);
+    } else {
+      element.dataset.animated = 'true';
+    }
+  }
 
-    <!-- Caja 5 -->
-    <div class="bg-white text-center p-6 shadow-lg transition hover:scale-105">
-      <div class="flex justify-center mb-4">
-        <svg class="w-10 h-10 text-blue-900" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-        </svg>
-      </div>
-      <h3 class="text-lg font-bold">SEGUIMIENTO MÉDICO</h3>
-      <p class="text-sm mt-2">ALF Seguridad y Salud</p>
-    </div>
+  updateCounter();
+}
 
-    <!-- Caja 6 -->
-    <div class="bg-blue-900/50 text-white  text-center p-6 shadow-lg transition hover:scale-105">
-      <div class="flex justify-center mb-4">
-        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
-        </svg>
-      </div>
-      <h3 class="text-lg font-bold">OTRO SERVICIO</h3>
-      <p class="text-sm mt-2">ALF Seguridad y Salud</p>
-    </div>
-  </div>
-</section>
+const countersSection = document.getElementById('counters-section');
 
+if (countersSection) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counters = countersSection.querySelectorAll('.counter');
+        counters.forEach(counter => {
+          if (counter instanceof HTMLElement && counter.dataset.animated === 'false') {
+            const finalCount = parseInt(counter.dataset.final || '0');
+            animateCounter(counter, finalCount);
+          }
+        });
+        // observer.unobserve(countersSection);
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
 
-
-
-
+  observer.observe(countersSection);
+}
+  </script>
 
   <!-- Sobre Nosotros -->
   <section class="py-20 container mx-auto text-center">
     <h2 class="text-4xl font-bold text-gray-900">¿Quiénes Somos?</h2>
     <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
-      En Seguridad y Salud somos tu socio estratégico que además de brindarte asesoría, realizamos un acompañamiento personalizado e integral.
+      En Seguridad y Salud somos tu socio estratégico que además de brindarte
+      asesoría, realizamos un acompañamiento personalizado e integral.
     </p>
   </section>
 
   <!-- Beneficios -->
-  <section class="bg-gray-100 py-20" >
-    <div class="container mx-auto text-center" >
+  <section class="bg-gray-100 py-20">
+    <div class="container mx-auto text-center">
       <h2 class="text-4xl font-bold text-gray-900">¿Por qué elegirnos?</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12" >
-        <div class="relative bg-white shadow-xl rounded-lg p-4 text-center transition-transform transform hover:scale-105 hover:shadow-2xl hover:shadow-[rgba(255,255,0,0.5)] flex flex-col h-full ">
-          <img src="/innovacion.svg" class="w-16 mx-auto mb-4" alt="Innovación" />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <div
+          class="relative bg-white shadow-xl rounded-lg p-4 text-center transition-transform transform hover:scale-105 hover:shadow-2xl hover:shadow-[rgba(255,255,0,0.5)] flex flex-col h-full"
+        >
+          <img
+            src="/innovacion.svg"
+            class="w-16 mx-auto mb-4"
+            alt="Innovación"
+          />
           <h3 class="text-xl font-semibold">Innovación</h3>
-          <p class="text-gray-600">Usamos las últimas tecnologías para garantizar soluciones modernas y eficientes.</p>
+          <p class="text-gray-600">
+            Usamos las últimas tecnologías para garantizar soluciones modernas y
+            eficientes.
+          </p>
         </div>
-        <div class="relative bg-white shadow-xl rounded-lg p-4 text-center transition-transform transform hover:scale-105 hover:shadow-2xl hover:shadow-[rgba(255,255,0,0.5)] flex flex-col h-full ">
+        <div
+          class="relative bg-white shadow-xl rounded-lg p-4 text-center transition-transform transform hover:scale-105 hover:shadow-2xl hover:shadow-[rgba(255,255,0,0.5)] flex flex-col h-full"
+        >
           <img src="/calidad.svg" class="w-16 mx-auto mb-4" alt="Calidad" />
           <h3 class="text-xl font-semibold">Calidad</h3>
-          <p class="text-gray-600">Nuestros proyectos cumplen con altos estándares de calidad y rendimiento.</p>
+          <p class="text-gray-600">
+            Nuestros proyectos cumplen con altos estándares de calidad y
+            rendimiento.
+          </p>
         </div>
-        <div class="relative bg-white shadow-xl rounded-lg p-4 text-center transition-transform transform hover:scale-105 hover:shadow-2xl hover:shadow-[rgba(255,255,0,0.5)] flex flex-col h-full ">
+        <div
+          class="relative bg-white shadow-xl rounded-lg p-4 text-center transition-transform transform hover:scale-105 hover:shadow-2xl hover:shadow-[rgba(255,255,0,0.5)] flex flex-col h-full"
+        >
           <img src="/soporte.svg" class="w-16 mx-auto mb-4" alt="Soporte" />
           <h3 class="text-xl font-semibold">Soporte 24/7</h3>
-          <p class="text-gray-600">Siempre estamos disponibles para ayudarte con cualquier duda o problema.</p>
+          <p class="text-gray-600">
+            Siempre estamos disponibles para ayudarte con cualquier duda o
+            problema.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  
-
   <!-- CTA Final -->
   <section class="text-center py-20 bg-gray-900 text-white">
-    <h2 class="text-[#F5B117] text-4xl font-bold">¿Listo para llevar tu negocio al siguiente nivel?</h2>
-    <p class="text-lg mt-4">Mantenga su empresa segura y enfocada en sus metas. Nosotros nos encargamos de la protección.</p>
-  
-    
-  
-    <a href="/contacto" class="mt-6 inline-block bg-[#F5B117] text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-700">
+    <h2 class="text-[#F5B117] text-4xl font-bold">
+      ¿Listo para llevar tu negocio al siguiente nivel?
+    </h2>
+    <p class="text-lg mt-4">
+      Mantenga su empresa segura y enfocada en sus metas. Nosotros nos
+      encargamos de la protección.
+    </p>
+
+    <a
+      href="/contacto"
+      class="mt-6 inline-block bg-[#F5B117] text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-700"
+    >
       ¡Hablemos!
     </a>
   </section>
