@@ -11,10 +11,66 @@ import Footer from '../components/Footer.astro';
   <section class="relative bg-gray-900 text-white text-center py-28">
     <div class="absolute inset-0 bg-cover bg-center" ></div>
     <div class="relative z-10">
-      <h1 class="text-5xl font-bold text-yellow-300">¡Hablemos!</h1>
+      <h1 class="text-5xl font-bold text-[#F0A520]">¡Hablemos!</h1>
       <p class="text-xl mt-4 text-gray-300">Déjanos un mensaje y te responderemos lo antes posible.</p>
     </div>
   </section>
+
+
+  <section class="bg-gradient-to-br from-gray-100 to-gray-200 py-36">
+    <div class="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <div class="rounded-xl overflow-hidden shadow-2xl">
+        <img src="web/background.jpeg" alt="Equipo de trabajo analizando documentos" class="w-full h-auto object-cover">
+      </div>
+      <div class="space-y-6">
+        <p class="text-sm font-semibold text-yellow-600 uppercase tracking-wider">NUESTRA PROPUESTA DE VALOR</p>
+        <h2 class="text-4xl font-extrabold text-gray-800 sm:text-5xl leading-tight">Asesoría Estratégica y Permanente para tu Éxito</h2>
+        <p class="text-xl text-gray-600 leading-relaxed">Transformamos tu enfoque en seguridad y salud, optimizando inversiones con análisis técnicos precisos para un entorno laboral más seguro y productivo.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div class="bg-white rounded-xl p-4 flex items-center space-x-3 shadow-md hover:shadow-lg transition duration-300"> {/* Reduje aún más el padding y el espacio */}
+            <div class="w-10 h-10 bg-yellow-500 text-white rounded-full flex items-center justify-center"> {/* Reduje el tamaño del icono contenedor */}
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"> {/* Reduje el tamaño del icono */}
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-base font-semibold text-gray-800 whitespace-nowrap">Llámanos:</p> {/* Ajusté el tamaño de la fuente */}
+              <p class="text-sm text-gray-600 whitespace-nowrap">+593 99 275 8731</p> {/* Ajusté el tamaño de la fuente */}
+            </div>
+          </div>
+          <div class="bg-white rounded-xl p-4 flex items-center space-x-3 shadow-md hover:shadow-lg transition duration-300"> {/* Reduje aún más el padding y el espacio */}
+            <div class="w-10 h-10 bg-yellow-500 text-white rounded-full flex items-center justify-center"> {/* Reduje el tamaño del icono contenedor */}
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"> {/* Reduje el tamaño del icono */}
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75a2.25 2.25 0 012.25-2.25h15a2.25 2.25 0 012.25 2.25z" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-base font-semibold text-gray-800 whitespace-nowrap">Escríbenos:</p> {/* Ajusté el tamaño de la fuente */}
+              <p class="text-sm text-gray-600 whitespace-nowrap">info@alfseguridadysalud.com</p> {/* Ajusté el tamaño de la fuente */}
+            </div>
+          </div>
+        </div>
+        <div class="mt-8">
+          <a href="#" class="inline-block bg-yellow-500 text-white font-semibold py-5 px-12 rounded-full hover:bg-yellow-600 transition duration-300 animate-bounce text-lg shadow-md">¡Cotiza ahora!</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    .animate-bounce {
+      animation: bounce 1s infinite alternate;
+    }
+  
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-8px);
+      }
+    }
+  </style>
 
   <!-- Información de contacto -->
   <section class="py-20 container mx-auto text-center">

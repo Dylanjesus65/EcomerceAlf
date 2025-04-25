@@ -133,7 +133,7 @@ import Footer from "../components/Footer.astro";
     </div>
   </section>
 
-  <!-- Seccion de Cajas -->
+  <!---------------------------------------- Seccion de Cajas ------------------------------>
   <h1 class="text-gray-900 text-5xl text- font-bold text-center">
     Principales Beneficios
   </h1>
@@ -282,6 +282,10 @@ import Footer from "../components/Footer.astro";
     </div>
   </section>
 
+
+ <!---------------------------------Seccion de Imagen sin javascript ---------------------------------------------------------->
+
+
   <section class="py-12 bg-gray-50">
     {/* Sección principal con padding y un fondo muy claro */}
     <div
@@ -415,13 +419,118 @@ import Footer from "../components/Footer.astro";
     </div>
   </section>
 
+ 
+  <!----------------------------------- Seccion lineas de fotos  ----------------------------------------->
+  
+  <section class="hidden md:block py-16 bg-[#f8f9fa] w-full">
+    <div class="w-full">
+      
+  
+      <div class="flex flex-nowrap w-full">
+        <!-- Card 1: Capacitacion -->
+        <div class="relative group w-1/4 overflow-hidden shadow-xl h-[400px] border-r border-gray-200 hover:border-[#fbbf24] transition-all duration-500 ease-in-out">
+          <img
+            src="/web/capacitaciones.png" 
+            alt="Capacitaciones"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-in-out group-hover:scale-110"
+          />
+          <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-[#0b1e37]/90 to-[#0b1e37]/30 md:backdrop-blur-sm z-10 transition-opacity duration-1000 ease-in-out opacity-100 md:opacity-0 group-hover:opacity-100">
+            <div class="text-center px-6 transform md:translate-y-10 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+              <h3 class="text-white text-3xl font-bold mb-4">Capacitaciones</h3>
+              <p class="text-gray-200 mb-8 text-base">
+                Capacitamos y guiamos a tus empleados.
+                Adquieren las habilidades clave para un mejor desempeño.
+                Invierte en un futuro más sólido para tu empresa.
+              </p>
+              
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 1: Certificación -->
+        <div class="relative group w-1/4 overflow-hidden shadow-xl h-[400px] border-r border-gray-200 hover:border-[#fbbf24] transition-all duration-500 ease-in-out">
+          <img
+            src="/web/certificaciones.png" 
+            alt="Certificación de seguridad"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-in-out group-hover:scale-110"
+          />
+          <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-[#0b1e37]/90 to-[#0b1e37]/30 md:backdrop-blur-sm z-10 transition-opacity duration-1000 ease-in-out opacity-100 md:opacity-0 group-hover:opacity-100">
+            <div class="text-center px-6 transform md:translate-y-10 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+              <h3 class="text-white text-3xl font-bold mb-4">Certificación</h3>
+              <p class="text-gray-200 mb-8 text-base">
+                Contamos con todas las certificaciones necesarias para garantizar estándares de seguridad de nivel mundial.
+              </p>
+              
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Equipo Profesional -->
+        <div class="relative group w-1/4 overflow-hidden shadow-xl h-[400px] border-r border-gray-200 hover:border-[#fbbf24] transition-all duration-500 ease-in-out">
+          <img
+            src="/web/equipamiento.png" 
+            alt="Equipo profesional"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-in-out group-hover:scale-110"
+          />
+          <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-[#0b1e37]/90 to-[#0b1e37]/30 md:backdrop-blur-sm z-10 transition-opacity duration-1000 ease-in-out opacity-100 md:opacity-0 group-hover:opacity-100">
+            <div class="text-center px-6 transform md:translate-y-10 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+              <h3 class="text-white text-3xl font-bold mb-4">Equipo Profesional</h3>
+              <p class="text-gray-200 mb-8 text-base">
+                Nuestro equipo conoce a fondo los insumos que ofrecemos
+                y está listo para asesorarte en la mejor elección para tus necesidades..
+              </p>
+             
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card 3: Protocolos -->
+        <div class="relative group w-1/4 overflow-hidden shadow-xl h-[400px] border-r border-gray-200 hover:border-[#fbbf24] transition-all duration-500 ease-in-out">
+          <img
+            src="/web/protocolos.png" 
+            alt="Protocolos de seguridad"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-in-out group-hover:scale-110"
+          />
+          <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-[#0b1e37]/90 to-[#0b1e37]/30 md:backdrop-blur-sm z-10 transition-opacity duration-1000 ease-in-out opacity-100 md:opacity-0 group-hover:opacity-100">
+            <div class="text-center px-6 transform md:translate-y-10 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+              <h3 class="text-white text-3xl font-bold mb-4">Protocolos Estrictos</h3>
+              <p class="text-gray-200 mb-8 text-base">
+                Implementamos protocolos de seguridad rigurosos en cada proyecto para prevenir incidentes y accidentes laborales.
+              </p>
+            
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card 4: Trabajo en Equipo -->
+        <div class="relative group w-1/4 overflow-hidden shadow-xl h-[400px] hover:border-[#fbbf24] transition-all duration-500 ease-in-out">
+          <img
+            src="/web/equipo.jpg"
+            alt="Trabajo en equipo"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-in-out group-hover:scale-110"
+          />
+          <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-[#0b1e37]/90 to-[#0b1e37]/30 md:backdrop-blur-sm z-10 transition-opacity duration-1000 ease-in-out opacity-100 md:opacity-0 group-hover:opacity-100">
+            <div class="text-center px-6 transform md:translate-y-10 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+              <h3 class="text-white text-3xl font-bold mb-4">Trabajo en Equipo</h3>
+              <p class="text-gray-200 mb-8 text-base">
+                Logramos mejores resultados cuando colaboramos con nuestros clientes y aliados.
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Seccion con javascript -->
   <section class="py-12 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-xl font-semibold text-gray-500 uppercase tracking-wider mb-6">DESARROLLANDO UNA EXPERIENCIA FIRME</h2>
+      
       <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
         <div>
-          <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Soluciones efectivas para mejoras en los procesos</h2>
+          <h2 class="text-xl font-semibold text-gray-500 uppercase tracking-wider mb-0">DESARROLLANDO UNA EXPERIENCIA FIRME</h2>
+          <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl mt-4">Soluciones efectivas para mejoras en los procesos</h2>
           <p class="mt-4 text-lg text-gray-700">Como adicional pero muy importante, puedes tener la confianza que nuestros años de experiencia y sólido respaldo plasmados en documentación técnica que con gusto serán gratuitamente compartidos.</p>
         </div>
         <div class="rounded-lg overflow-hidden shadow-md">
@@ -431,20 +540,20 @@ import Footer from "../components/Footer.astro";
 
       <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center" id="counters-section">
         <div>
-          <div class="font-extrabold text-4xl text-[#fbbf24] counter" data-final="12" data-animated="false">0</div>
-          <p class="mt-2 text-sm text-gray-500 font-bold">Años de experiencia</p>
+          <div class="font-extrabold text-4xl text-[#fbbf24] counter" data-final='12' data-animated="false">0</div>
+          <p class="mt-2 text-xl text-gray-500 font-bold">Años de experiencia</p>
         </div>
         <div>
           <div class="font-extrabold text-4xl text-[#fbbf24] counter" data-final="30" data-animated="false">0+</div>
-          <p class="mt-2 text-sm text-gray-500 font-bold">Años de experiencia</p>
+          <p class="mt-2 text-xl text-gray-500 font-bold">Empresas satisferchas</p>
         </div>
         <div>
           <div class="font-extrabold text-4xl text-[#fbbf24] counter" data-final="400" data-animated="false">0</div>
-          <p class="mt-2 text-sm text-gray-500 font-bold">Años de experiencia</p>
+          <p class="mt-2 text-xl text-gray-500 font-bold">Profesionales asociados</p>
         </div>
         <div>
           <div class="font-extrabold text-4xl text-[#fbbf24] counter" data-final="100" data-animated="false">0</div>
-          <p class="mt-2 text-sm text-gray-500 font-bold">Años de experiencia</p>
+          <p class="mt-2 text-xl text-gray-500 font-bold">Documentos técnicos creados</p>
         </div>
       </div>
     </div>
@@ -494,15 +603,63 @@ if (countersSection) {
   observer.observe(countersSection);
 }
   </script>
+<section class="relative w-full bg-[#101828] py-16 bg-opacity-85 overflow-hidden">
+  <!-- Fondo con efecto de imagen industrial semitransparente -->
+  <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('web/background.jpeg'); opacity: 0.2;"></div>
+  
+  <div class="container mx-auto px-4 z-10 relative">
+      <div class="flex flex-col lg:flex-row justify-between gap-8">
+          <!-- Caja de Contacto Izquierda -->
+          <div class="bg-blue-950/50 bg-opacity-80 backdrop-blur-sm p-8 rounded-lg shadow-lg w-full lg:w-1/2 transition-all duration-300 hover:bg-opacity-90" >
+              <h2 class="text-4xl font-bold text-white mb-6">Ponte en contacto</h2>
+              
+              <p class="text-gray-300 mb-6">
+                  Si tienes preguntas o ideas que te gustaría compartir, envía un mensaje. Para algo más específico, utiliza una de las direcciones a continuación.
+              </p>
+              
+              <div class="space-y-6">
+                  <div>
+                      <h3 class="text-xl font-semibold text-white mb-2">ALF Seguridad y Salud</h3>
+                      <p class="text-gray-300">Quito</p>
+                  </div>
+                  
+                  <div>
+                      <h3 class="text-xl font-semibold text-white mb-2">Contacto:</h3>
+                      <p class="text-blue-300 hover:text-blue-200 transition-colors">+593 99 273 8731</p>
+                  </div>
+                  
+                  <div>
+                      <h3 class="text-xl font-semibold text-white mb-2">Nuestro Email</h3>
+                      <a href="mailto:info@alfseguridadysalud.com" class="text-blue-300 hover:text-blue-200 transition-colors">
+                          info@alfseguridadysalud.com
+                      </a>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Caja de Proyecto Derecha -->
+          <div class="bg-white bg-opacity-90 backdrop-blur-sm p-8 rounded-lg shadow-lg w-full lg:w-1/2 transition-all duration-300 hover:bg-opacity-95">
+              <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Hablemos de tu proyecto</h2>
+              
+              <p class="text-gray-600 mb-8 text-center">
+                  Después de que obtengamos tu información, estableceremos un tiempo para discutir tu proyecto con más detalle.
+              </p>
+              
+              <div class="bg-gray-100 bg-opacity-70 p-6 rounded-lg flex items-center justify-center">
+                  <div class="text-center">
+                      <div class="mb-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                      </div>
+                      <p class="text-red-500 font-medium">Error: Formulario de contacto no encontrado.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
 
-  <!-- Sobre Nosotros -->
-  <section class="py-20 container mx-auto text-center">
-    <h2 class="text-4xl font-bold text-gray-900">¿Quiénes Somos?</h2>
-    <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
-      En Seguridad y Salud somos tu socio estratégico que además de brindarte
-      asesoría, realizamos un acompañamiento personalizado e integral.
-    </p>
-  </section>
 
   <!-- Beneficios -->
   <section class="bg-gray-100 py-20">
