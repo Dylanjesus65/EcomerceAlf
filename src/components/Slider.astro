@@ -1,0 +1,139 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Swiper from 'swiper';
+import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
+---
+
+
+<Layout>
+    
+
+<section class="relative bg-[#101828]/80 text-gray-900">
+    <!-- Swiper container -->
+    <div class="swiper hero-swiper h-[500px]">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="relative h-full w-full">
+            <!-- Fondo con overlay -->
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('testimonio.jpg');">
+              <div class="absolute inset-0 bg-black/60"></div>
+            </div>
+            <!-- Contenido -->
+            <div class="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center">
+              <h1 class="text-5xl font-bold text-[#F0A520]">Sobre Nosotros</h1>
+              <p class="text-xl mt-4 text-gray-300 max-w-3xl mx-auto">
+                Más que una empresa, somos parte de la comunidad de Ibarra. Nacimos y crecemos aquí, 
+                comprometidos con el bienestar y el progreso de nuestra gente y nuestros negocios.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="relative h-full w-full">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/ruta/a/imagen2.jpg');">
+              <div class="absolute inset-0 bg-black/60"></div>
+            </div>
+            <div class="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center">
+              <h1 class="text-5xl font-bold text-[#F0A520]">Nuestra Misión</h1>
+              <p class="text-xl mt-4 text-gray-300 max-w-3xl mx-auto">
+                Transformar el comercio local con soluciones tecnológicas accesibles y 
+                personalizadas que impulsen el crecimiento de negocios ibarreños.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="relative h-full w-full">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/ruta/a/imagen3.jpg');">
+              <div class="absolute inset-0 bg-black/60"></div>
+            </div>
+            <div class="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center">
+              <h1 class="text-5xl font-bold text-[#F0A520]">Nuestra Visión</h1>
+              <p class="text-xl mt-4 text-gray-300 max-w-3xl mx-auto">
+                Ser referentes de innovación en la región, conectando el talento local 
+                con oportunidades globales mediante tecnología de vanguardia.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Controles de navegación -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+  
+  <!-- Incluir estilos de Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  
+  <!-- Incluir script de Swiper -->
+  <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  
+  <script is:inline>
+    // Inicializar Swiper cuando el DOM esté listo
+    document.addEventListener('DOMContentLoaded', function() {
+      // @ts-ignore - Ignorar el error de TypeScript ya que Swiper está disponible globalmente
+      const swiper = new window.Swiper('.hero-swiper', {
+        // Opciones básicas
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+        
+        // Paginación (puntos)
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        
+        // Botones de navegación
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    });
+  </script>
+  
+  <style>
+    /* Personalizar colores de los controles de Swiper */
+    :root {
+      --swiper-theme-color: #F0A520;
+      --swiper-navigation-size: 30px;
+    }
+    
+    .swiper-button-next, 
+    .swiper-button-prev {
+      background-color: rgba(0, 0, 0, 0.4);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      transition: background-color 0.3s ease;
+    }
+    
+    .swiper-button-next:hover, 
+    .swiper-button-prev:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    
+    .swiper-pagination-bullet-active {
+      background-color: #F0A520;
+    }
+  </style>
+  </Layout>
