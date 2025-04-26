@@ -15,8 +15,8 @@ import 'swiper/css/effect-fade';
         <div class="swiper-slide">
           <div class="relative h-full w-full">
             <!-- Fondo con overlay mejorado -->
-            <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('testimonio.jpg');">
-              <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80"></div>
+            <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('slider/slider1.png');">
+              <div class="absolute inset-0 bg-gradient-to-b from-[#101828]/60 via-[#101828]/40 to-[#101828]/60"></div>
             </div>
             <!-- Contenido con mejor espaciado y animación -->
             <div class="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center animate-fadeIn">
@@ -39,8 +39,8 @@ import 'swiper/css/effect-fade';
         <div class="swiper-slide">
           <div class="relative h-full w-full">
             <!-- Fondo con overlay mejorado -->
-            <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('testimonio.jpg');">
-              <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80"></div>
+            <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('slider/slider2.jpg');">
+              <div class="absolute inset-0 bg-gradient-to-b from-[#101828]/80 via-[#101828]/60 to-[#101828]/80"></div>
             </div>
             <!-- Contenido con mejor espaciado y animación -->
             <div class="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center animate-fadeIn">
@@ -64,8 +64,8 @@ import 'swiper/css/effect-fade';
         <!-- Slide 3 -->
         <div class="swiper-slide">
           <div class="relative h-full w-full">
-            <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('/ruta/a/imagen2.jpg');">
-              <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80"></div>
+            <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('slider/slider3.jpg');">
+              <div class="absolute inset-0 bg-gradient-to-b from-[#101828]/80 via-[#101828]/60 to-[#101828]/80"></div>
             </div>
             <div class="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center animate-fadeIn">
               <span class="text-sm font-semibold uppercase tracking-wider text-[#F0A520] mb-2">Nuestro Propósito</span>
@@ -87,8 +87,8 @@ import 'swiper/css/effect-fade';
         <!-- Slide 4 -->
         <div class="swiper-slide">
           <div class="relative h-full w-full">
-            <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('slider/slider1.png');">
-              <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80"></div>
+            <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('slider/slider4.jpg');">
+              <div class="absolute inset-0 bg-gradient-to-b from-[#101828]/80 via-[#101828]/60 to-[#101828]/80"></div>
             </div>
             <div class="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center animate-fadeIn">
               <span class="text-sm font-semibold uppercase tracking-wider text-[#F0A520] mb-2">Hacia el Futuro</span>
@@ -189,6 +189,10 @@ import 'swiper/css/effect-fade';
       width: 14px;
       height: 14px;
     }
+    .swiper, .swiper-slide, .swiper-wrapper {
+  width: 100%;
+  height: 100lvh;
+}
     
     /* Animaciones adicionales */
     @keyframes fadeIn {

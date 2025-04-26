@@ -1,0 +1,145 @@
+---
+import Layout from "../layouts/Layout.astro";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
+---
+
+<Layout>
+  <section class="relative text-gray-900">
+    <!-- Swiper container - Aumentado altura a 700px -->
+    <div class="swiper hero-swiper h-[700px]">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="relative h-full w-full">
+            <!-- Fondo con overlay mejorado -->
+            <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('slider2/slider1.jpeg');">
+              <div class="absolute inset-0 bg-gradient-to-b from-[#101828]/20 via-[#101828]/20 to-[#101828]/20"></div>
+            </div>
+            
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="relative h-full w-full">
+            <!-- Fondo con overlay mejorado -->
+            <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('slider2/slider2.jpeg');">
+                <div class="absolute inset-0 bg-gradient-to-b from-[#101828]/20 via-[#101828]/20 to-[#101828]/20"></div>
+              </div>
+            <!-- Contenido con mejor espaciado y animación -->
+            
+          </div>
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="relative h-full w-full">
+            <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('slider2/slider3.png');">
+                <div class="absolute inset-0 bg-gradient-to-b from-[#101828]/20 via-[#101828]/20 to-[#101828]/20"></div>
+              </div>
+           
+          </div>
+        </div>
+        
+   
+      
+      
+      <!-- Controles de navegación mejorados -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+  
+  <!-- Incluir estilos de Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  
+  <!-- Incluir script de Swiper -->
+  <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  
+  <script is:inline>
+    // Inicializar Swiper cuando el DOM esté listo
+    document.addEventListener('DOMContentLoaded', function() {
+      // @ts-ignore - Ignorar el error de TypeScript ya que Swiper está disponible globalmente
+      const swiper = new window.Swiper('.hero-swiper', {
+        // Opciones básicas
+        loop: true,
+        autoplay: {
+          delay: 6000,
+          disableOnInteraction: false,
+        },
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+        speed: 1000, // Transición más suave
+        
+        // Paginación (puntos)
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        
+        // Botones de navegación
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    });
+  </script>
+  
+  <style>
+    /* Personalizar colores de los controles de Swiper */
+    :root {
+      --swiper-theme-color: #F0A520;
+      --swiper-navigation-size: 24px;
+    }
+    
+    .swiper-button-next, 
+    .swiper-button-prev {
+      background-color: rgba(240, 165, 32, 0.2);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      border: 2px solid rgba(240, 165, 32, 0.3);
+    }
+    
+    .swiper-button-next:hover, 
+    .swiper-button-prev:hover {
+      background-color: rgba(240, 165, 32, 0.4);
+      transform: scale(1.1);
+    }
+    
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      opacity: 0.6;
+      transition: all 0.3s ease;
+    }
+    
+    .swiper-pagination-bullet-active {
+      background-color: #F0A520;
+      opacity: 1;
+      width: 14px;
+      height: 14px;
+    }
+    .swiper, .swiper-slide, .swiper-wrapper {
+  width: 100%;
+  height: 80lvh;
+}
+    
+    /* Animaciones adicionales */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animate-fadeIn {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+  </style>
+</Layout>

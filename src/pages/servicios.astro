@@ -4,7 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ServicioCard from "../components/ServicioCard.astro";
 import servicios from '../data/servicios';
-import Slider from '../components/Slider.astro';
+import SliderServicios from '../components/SliderServicios.astro';
 
 
 // Convertimos el objeto en un array de servicios
@@ -16,7 +16,7 @@ const serviciosArray = Object.entries(servicios).map(([slug, data]) => ({
 
 <Layout>
   <Header />
-  <Slider class="md:hidden"/>
+  <SliderServicios class="md:hidden"/>
   <head>
     <title>Servicios | Mi E-commerce</title>
   </head>
