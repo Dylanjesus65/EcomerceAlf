@@ -2,31 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Slider from "../components/Slider.astro";
 ---
 
 <Layout>
   <Header />
 
-  <!-- Sección Hero -->
-  <section class="relative bg-gray-900 text-white text-center py-32">
-    <div class="absolute inset-0 bg-cover bg-center"></div>
-    <div class="relative z-10">
-      <div class="max-w-3xl mx-auto">
-        <!--- Contenedor con ancho máximo ---->
-        <h1 class="text-[#F5B117] text-5xl text- font-bold">
-          Somos tu socio estratégico
-        </h1>
-        <p class="text-xl text-gray-300 mt-4 max-w-2xl mx-auto">
-          En Seguridad y Salud somos tu socio estratégico que además de
-          brindarte asesoría, realizamos un acompañamiento personalizado e
-          integral. Al ser parte de tu empresa o negocio podrás ver notablemente
-          los cambios en tu entorno laboral, reduciendo así tu inversión en
-          seguridad y salud para priorizarla en tu verdadera necesidad con
-          sustento técnico.
-        </p>
-      </div>
-    </div>
-  </section>
+  <Slider/>
 
   <!-- Tarjetas -->
   <section class="py-16 bg-white">
@@ -134,138 +116,75 @@ import Footer from "../components/Footer.astro";
   </section>
 
   <!---------------------------------------- Seccion de Cajas ------------------------------>
-  <h1 class="text-gray-900 text-5xl text- font-bold text-center">
+  <h1 class="text-gray-900 text-5xl font-bold text-center">
     Principales Beneficios
   </h1>
   <section
     class="relative h-auto bg-cover bg-center bg-no-repeat"
     style="background-image: url('web/background2.jpg')"
   >
-    <!-- Overlay azul translúcido con blur -->
     <div class="absolute inset-0 bg-[#101828]/80 z-0"></div>
-
-    <!-- Contenido principal (tarjetas) -->
+  
     <div
       class="relative z-10 max-w-6xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-3 gap-6"
     >
-      <!-- Caja 1 -->
       <div
         class="bg-white text-center p-6 shadow-lg transition hover:scale-105"
       >
-        <!-- Icono -->
         <div class="flex justify-center mb-4">
-          <img src="soporte.svg" alt="">
+          <img src="soporte.svg" alt="Asesoría Técnica" class="w-16 h-16" />
         </div>
         <h3 class="text-lg font-bold">ASESORÍA TÉCNICA</h3>
         <p class="text-sm mt-2">ALF Seguridad y Salud</p>
       </div>
-
-      <!-- Caja 2 -->
+  
       <div
         class="bg-blue-900/50 text-white text-center p-6 shadow-lg transition hover:scale-105"
       >
         <div class="flex justify-center mb-4">
-          <svg
-            class="w-10 h-10 text-white"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3 3v18h18V3H3z"></path>
-          </svg>
+          <img src="/icons/money.svg" alt="Guía para Inversión Adecuada" class="w-16 h-16" />
         </div>
         <h3 class="text-lg font-bold">GUÍA PARA INVERSIÓN ADECUADA</h3>
         <p class="text-sm mt-2">ALF Seguridad y Salud</p>
       </div>
-
-      <!-- Caja 3 -->
+  
       <div
         class="bg-white text-center p-6 shadow-lg transition hover:scale-105"
       >
         <div class="flex justify-center mb-4">
-          <svg
-            class="w-10 h-10 text-blue-900"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M11 11V3h2v8h3l-4 4-4-4h3z"></path>
-          </svg>
+          <img src="/icons/risk.svg" alt="Medición de Riesgos" class="w-16 h-16" />
         </div>
         <h3 class="text-lg font-bold">MEDICIÓN DE RIESGOS</h3>
         <p class="text-sm mt-2">ALF Seguridad y Salud</p>
       </div>
-
-      <!-- Caja 4 -->
+  
       <div
         class="bg-blue-900/50 text-white text-center p-6 shadow-lg transition hover:scale-105"
       >
         <div class="flex justify-center mb-4">
-          <svg
-            class="w-10 h-10 text-white"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3"
-            ></path>
-          </svg>
+          <img src="/icons/graduate.svg" alt="Capacitación Certificada" class="w-16 h-16" />
         </div>
         <h3 class="text-lg font-bold">CAPACITACIÓN CERTIFICADA</h3>
         <p class="text-sm mt-2">ALF Seguridad y Salud</p>
       </div>
-
-      <!-- Caja 5 -->
+  
       <div
         class="bg-white text-center p-6 shadow-lg transition hover:scale-105"
       >
         <div class="flex justify-center mb-4">
-          <svg
-            class="w-10 h-10 text-blue-900"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M5 13l4 4L19 7"></path>
-          </svg>
+          <img src="/icons/doctor.svg" alt="Seguimiento Médico" class="w-16 h-16" />
         </div>
         <h3 class="text-lg font-bold">SEGUIMIENTO MÉDICO</h3>
         <p class="text-sm mt-2">ALF Seguridad y Salud</p>
       </div>
-
-      <!-- Caja 6 -->
+  
       <div
         class="bg-blue-900/50 text-white text-center p-6 shadow-lg transition hover:scale-105"
       >
         <div class="flex justify-center mb-4">
-          <svg
-            class="w-10 h-10 text-white"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M12 4v16m8-8H4"></path>
-          </svg>
+          <img src="/icons/casco.svg" alt="ALF Seguridad y Salud" class="w-16 h-16" />
         </div>
-        <h3 class="text-lg font-bold">OTRO SERVICIO</h3>
-        <p class="text-sm mt-2">ALF Seguridad y Salud</p>
+        <h3 class="text-lg font-bold">ALF Seguridad y Salud</h3>
       </div>
     </div>
   </section>
