@@ -2,21 +2,41 @@
 import "../styles/global.css";
 
 ---
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width", initial-scale ="1.0"/>
-    <link rel="icon" type="image/png+xml" href="/logo-1.png" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Alf S.A</title>
-  </head>
-  <body class="flex flex-col min-h-screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <slot class="flex grow"/>
+    <!-- Icono de pestaña -->
+    <link rel="icon" type="image/png" href="/logo-1.png" />
+    
+    <!-- Título por defecto (puedes sobreescribir por página) -->
+    <title>Alf S.A - Seguridad y Salud Ocupacional</title>
+
+    <!-- Meta Descripción por defecto -->
+    <meta name="description" content="Alf S.A - Soluciones integrales de seguridad y salud ocupacional en Ecuador." />
+
+    <!-- Astro Generator -->
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Mejoras SEO adicionales -->
+    <meta name="author" content="Alf Seguridad y Salud" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Alf S.A - Seguridad y Salud Ocupacional" />
+    <meta property="og:description" content="Conoce nuestros servicios en seguridad laboral, capacitaciones y salud ocupacional." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/logo-1.png" />
+    <meta property="og:url" content="https://ecommerce.alfseguridadysalud.com/" />
+  </head>
+
+  <body class="flex flex-col min-h-screen antialiased text-gray-800 bg-white">
+    <main class="flex-grow">
+      <slot />
+    </main>
   </body>
 </html>
+
 
 <style >
   
