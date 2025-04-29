@@ -390,19 +390,19 @@ import Slider from "../components/Slider.astro";
       <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center" id="counters-section">
         <div>
           <div class="font-extrabold text-4xl text-[#fbbf24] counter" data-final='12' data-animated="false">0</div>
-          <p class="mt-2 text-xl text-gray-500 font-bold">Años de experiencia</p>
+          <p class="mt-2 text-xl text-gray-500 font-bold">+ Años de experiencia</p>
         </div>
         <div>
           <div class="font-extrabold text-4xl text-[#fbbf24] counter" data-final="30" data-animated="false">0+</div>
-          <p class="mt-2 text-xl text-gray-500 font-bold">Empresas satisferchas</p>
+          <p class="mt-2 text-xl text-gray-500 font-bold">+ Empresas satisfechas</p>
         </div>
         <div>
           <div class="font-extrabold text-4xl text-[#fbbf24] counter" data-final="400" data-animated="false">0</div>
-          <p class="mt-2 text-xl text-gray-500 font-bold">Profesionales asociados</p>
+          <p class="mt-2 text-xl text-gray-500 font-bold">+ Profesionales asociados</p>
         </div>
         <div>
           <div class="font-extrabold text-4xl text-[#fbbf24] counter" data-final="100" data-animated="false">0</div>
-          <p class="mt-2 text-xl text-gray-500 font-bold">Documentos técnicos creados</p>
+          <p class="mt-2 text-xl text-gray-500 font-bold">+ Documentos técnicos creados</p>
         </div>
       </div>
     </div>
@@ -452,6 +452,7 @@ if (countersSection) {
   observer.observe(countersSection);
 }
   </script>
+  <!------------------------------------------------------- Tarjetas de Contacto ----------------------------------------------------------------->
 <section class="relative w-full bg-[#101828] py-16 bg-opacity-85 overflow-hidden">
   <!-- Fondo con efecto de imagen industrial semitransparente -->
   <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('web/background.jpeg'); opacity: 0.2;"></div>
@@ -556,21 +557,35 @@ if (countersSection) {
   </section>
 
   <!-- CTA Final -->
-  <section class="text-center py-20 bg-gray-900 text-white">
-    <h2 class="text-[#F5B117] text-4xl font-bold">
-      ¿Listo para llevar tu negocio al siguiente nivel?
-    </h2>
-    <p class="text-lg mt-4">
-      Mantenga su empresa segura y enfocada en sus metas. Nosotros nos
-      encargamos de la protección.
-    </p>
-
-    <a
-      href="/contacto"
-      class="mt-6 inline-block bg-[#F5B117] text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-700"
-    >
-      ¡Hablemos!
-    </a>
+  <section class="relative py-24 bg-gray-900 text-white overflow-hidden">
+    <div
+      class="absolute inset-0 bg-cover bg-center z-0"
+      style="background-image: url('/web/background.jpeg'); opacity: 0.2;"
+    ></div>
+  
+    <div class="container mx-auto px-4 z-10 relative">
+      <div class="flex flex-col lg:flex-row justify-center lg:items-center gap-12">
+        <div class="max-w-lg text-center lg:text-left">
+          <h2 class="text-yellow-500 text-4xl font-extrabold sm:text-5xl leading-tight mb-6">
+            ¿Listo para llevar tu negocio al siguiente nivel?
+          </h2>
+          <p class="text-lg leading-relaxed mb-8">
+            Mantenga su empresa segura y enfocada en sus metas. Nosotros nos encargamos de la protección, para que usted
+            se concentre en el crecimiento.
+          </p>
+          <a
+            href="/contacto"
+            class="inline-block bg-yellow-500 text-gray-900 font-semibold px-8 py-4 rounded-lg text-lg hover:bg-yellow-400 transition duration-300"
+          >
+            ¡Hablemos!
+          </a>
+        </div>
+        <div class="max-w-md">
+          {/* Puedes añadir una imagen o algún otro elemento visual aquí */}
+          <img src="growth.svg" alt="Ilustración de crecimiento" class="w-full h-auto rounded-lg shadow-md" />
+        </div>
+      </div>
+    </div>
   </section>
 
   <Footer />

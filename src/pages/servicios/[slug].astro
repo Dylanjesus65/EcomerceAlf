@@ -85,7 +85,8 @@ const whatsappNumber = "593992738731";
   if (respuestaInput && whatsappLinkElement) {
     respuestaInput.addEventListener("input", () => {
       const respuesta = respuestaInput.value || "";
-      whatsappLinkElement.href = `https://wa.me/${whatsappNumber}?text=Hola,%20estoy%20interesado%20en%20${nombre}%20por%20${precio}.%20${pregunta}%20${respuesta}.%20¿Cómo%20puedo%20gestionar%20mi%20compra?`;
+      whatsappLinkElement.href = `https://wa.me/${whatsappNumber}?text=Hola,%20estoy%20interesado%20en%20${nombre}.%20${pregunta}%20${respuesta}%20%C2%BFPodr%C3%ADa%20indicarme%20c%C3%B3mo%20gestionar%20mi%20compra%3F
+`;
     });
 
     // Inicializa el enlace sin respuesta (opcional, ya que el href inicial en el HTML ya tiene esta base)

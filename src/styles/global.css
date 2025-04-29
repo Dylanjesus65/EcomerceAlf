@@ -7,7 +7,7 @@ Header{
   background-color: #101828; /* Un fondo para que se vea bien */
   background-color: white; /* Un fondo para que se vea bien */
   
-  box-shadow: 0 2px 4px rgba(223, 202, 14, 0.801); /* Sombra opcional para dar un efecto de profundidad */
+  box-shadow: 0 2px 4px #F3A51B; /* Sombra opcional para dar un efecto de profundidad */
  
 }
 Footer{
