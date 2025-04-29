@@ -14,7 +14,7 @@ import Slider from '../components/Slider.astro';
   <section class="bg-gradient-to-br from-gray-100 to-gray-200 py-36">
     <div class="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
       <div class="rounded-xl overflow-hidden shadow-2xl">
-        <img src="web/background.jpeg" alt="Equipo de trabajo analizando documentos" class="w-full h-auto object-cover">
+        <img src="/web/background.jpeg" alt="Equipo de trabajo analizando documentos" class="w-full h-auto object-cover">
       </div>
       <div class="space-y-6">
         <p class="text-sm font-semibold text-yellow-600 uppercase tracking-wider">NUESTRA PROPUESTA DE VALOR</p>
@@ -23,7 +23,7 @@ import Slider from '../components/Slider.astro';
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
           <div class="bg-white rounded-xl p-4 flex items-center space-x-3 shadow-md hover:shadow-lg transition duration-300"> {/* Reduje aún más el padding y el espacio */}
             <div class="w-10 h-10 bg-yellow-500 text-white rounded-full flex items-center justify-center"> {/* Reduje el tamaño del icono contenedor */}
-              <img src="phone.svg" alt="telefono">
+              <img src="/phone.svg" alt="telefono">
             </div>
             <div>
               <p class="text-base font-semibold text-gray-800 whitespace-nowrap">Llámanos:</p> {/* Ajusté el tamaño de la fuente */}
@@ -32,7 +32,7 @@ import Slider from '../components/Slider.astro';
           </div>
           <div class="bg-white rounded-xl p-4 flex items-center space-x-3 shadow-md hover:shadow-lg transition duration-300"> {/* Reduje aún más el padding y el espacio */}
             <div class="w-10 h-10 bg-yellow-500 text-white rounded-full flex items-center justify-center"> {/* Reduje el tamaño del icono contenedor */}
-              <img src="email.svg" alt="email">
+              <img src="/email.svg" alt="email">
             </div>
             <div>
               <p class="text-base font-semibold text-gray-800 whitespace-nowrap">Escríbenos:</p> {/* Ajusté el tamaño de la fuente */}
@@ -86,7 +86,7 @@ import Slider from '../components/Slider.astro';
   
   <section class="relative w-full bg-[#101828] py-16 bg-opacity-85 overflow-hidden">
     <!-- Fondo con efecto de imagen industrial semitransparente -->
-    <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('web/background.jpeg'); opacity: 0.2;"></div>
+    <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('/web/background.jpeg'); opacity: 0.2;"></div>
     
     <div class="container mx-auto px-4 z-10 relative">
         <div class="flex flex-col lg:flex-row justify-between gap-8">
