@@ -1,36 +1,36 @@
 ---
 import "../styles/global.css";
 
+// Layout.astro
+const { title = "Alf S.A", description = "Soluciones integrales de seguridad y salud ocupacional en Ecuador." } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+  <head> 
+  
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Icono de pestaña -->
     <link rel="icon" type="image/png" href="/logo-1.png" />
     
-    <!-- Título por defecto (puedes sobreescribir por página) -->
-    <title>Alf S.A - Seguridad y Salud Ocupacional</title>
+    <title>{title}</title>
+    <meta name="description" content={description} />
 
-    <!-- Meta Descripción por defecto -->
-    <meta name="description" content="Alf S.A - Soluciones integrales de seguridad y salud ocupacional en Ecuador." />
-
-    <!-- Astro Generator -->
-    <meta name="generator" content={Astro.generator} />
-
-    <!-- Mejoras SEO adicionales -->
-    <meta name="author" content="Alf Seguridad y Salud" />
-    <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Alf S.A - Seguridad y Salud Ocupacional" />
-    <meta property="og:description" content="Conoce nuestros servicios en seguridad laboral, capacitaciones y salud ocupacional." />
+    <!-- Open Graph para Redes Sociales -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/logo-1.png" />
-    <meta property="og:url" content="https://ecommerce.alfseguridadysalud.com/" />
-  </head>
+    <meta property="og:image" content="https://ecommerce.alfseguridadysalud.com/logo-1.png" />
+    <meta property="og:url" content="https://ecommerce.alfseguridadysalud.com" />
 
-  <body class="flex flex-col min-h-screen antialiased text-gray-800 bg-white">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://ecommerce.alfseguridadysalud.com/logo-1.png" />
+
+  </head>
+  <meta name="google-site-verification" content="RJHVGZ75IO8Fgb9d95IN3dbXcG6YtMTP6XvYLP-guVg" />
+  <body class="flex flex-col min-h-screen">
     <main class="flex-grow">
       <slot />
     </main>
