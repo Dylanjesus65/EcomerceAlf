@@ -15,10 +15,8 @@ const serviciosArray = Object.entries(servicios).map(([slug, data]) => ({
 const title = "Servicios de Seguridad Laboral - Alf S.A";
 const description = "Descubre nuestros servicios de capacitación, evaluación de riesgos, salud ocupacional y más.";
 ---
+<Layout {title} {description}/>
 
-<Layout {title} {description}>
-  
-</Layout>
   <Header />
   <SliderServicios class="md:hidden"/>
   <head>

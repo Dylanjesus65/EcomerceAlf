@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 const currentPath = Astro.url.pathname;
 ---
 
-<Layout>
+
   <!-- Barra superior -->
   <div class="w-full bg-[#1D2327] text-white text-sm py-4 px-6">
     <div class="max-w-[1600px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
@@ -45,7 +45,7 @@ const currentPath = Astro.url.pathname;
 
       <nav class="hidden md:flex space-x-8 font-semibold text-[#1D2327] text-lg">
         <a href="/" class={`hover:text-[#F5B117] nav-link-desktop ${currentPath === '/' ? 'active-link' : ''}`}>Inicio</a>
-        <a href="/nosotros" class={`hover:text-[#F5B117] nav-link-desktop ${currentPath === '/nosotros' ? 'active-link' : ''}`}>¿Quiénes Somos?</a>
+        <a href="/nosotros" class={`hover:text-[#F5B117] nav-link-desktop ${currentPath === '/nosotros' ? 'active-link' : ''}`}>Nosotros</a>
         <a href="/contacto" class={`hover:text-[#F5B117] nav-link-desktop ${currentPath === '/contacto' ? 'active-link' : ''}`}>Contacto</a>
         <a href="/servicios" class={`hover:text-[#F5B117] nav-link-desktop ${currentPath === '/servicios' ? 'active-link' : ''}`}>Servicios</a>
       </nav>
