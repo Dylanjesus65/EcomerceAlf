@@ -11,7 +11,7 @@ const servicios: Record<string, { nombre: string; imagen: string; descripcion: s
     imagen: "/servicio2.png",
     descripcion: "Nuestros técnicos supervisan y gestionan la Seguridad e Higiene en el trabajo, asegurando el cumplimiento de la normativa vigente.",
     precio: "$500",
-    pregunta: "¿Cuántas horas del tecnico al mes requieres? ¿Incluimos mediciones?"
+    pregunta: "¿Cuántas horas del técnico al mes requieres? ¿Incluimos mediciones?"
   },
   "confort-laboral": {
     nombre: "Actividades para el Confort Laboral",
@@ -51,7 +51,7 @@ const servicios: Record<string, { nombre: string; imagen: string; descripcion: s
   "certificacion-riesgos-construccion": {
     nombre: "Certificación en Prevención de Riesgos Laborales en Construcción",
     imagen: "/servicio8.png",
-    descripcion: "Brindamos capacitación y certificación en seguridad en construcción para cumplir con normativas y exigencias del sector.",
+    descripcion: "Brindamos capacitación y certificación de seguridad en construcción para cumplir con normativas y exigencias del sector.",
     precio: "$500",
     pregunta: "¿Cuántas personas requieren la certificación?"
   },
@@ -219,7 +219,7 @@ const servicios: Record<string, { nombre: string; imagen: string; descripcion: s
   "reglamento-higiene-seguridad-trabajo": {
     nombre: "Reglamento de Higiene y Seguridad en el Trabajo",
     imagen: "/servicio32.png",
-    descripcion: "Elaboramos y gestionamos la aprobación y renovación del reglamento interno.",
+    descripcion: "Aprobación del Reglamento de  Higiene y Seguridad en el Trabajo.",
     precio: "$500",
     pregunta: "¿Cuándo podríamos tener una reunión para ampliar la información?"
   },
@@ -235,21 +235,21 @@ const servicios: Record<string, { nombre: string; imagen: string; descripcion: s
     imagen: "/servicio34.png",
     descripcion: "Brindamos asesoramiento especializado para resolver problemas específicos en SST.",
     precio: "$500",
-    pregunta: "¿Cuentanos un poco del caso?"
+    pregunta: "¿Cuéntanos un poco del caso?"
   },
   "gestion-permisos-ambientales": {
     nombre: "Gestión de Permisos Ambientales",
     imagen: "/servicio35.png",
     descripcion: "Gestionamos la tramitación de permisos ambientales para tu empresa.",
     precio: "$500",
-    pregunta: "¿Area de la instalación, tipo de actividad, permiso o renovación?"
+    pregunta: "¿Área de la instalación, tipo de actividad, permiso o renovación?"
   },
   "asesoria-legal-SST": {
     nombre: "Asesoría Legal en SST",
     imagen: "/servicio36.png",
     descripcion: "Nuestros abogados te apoyan en la resolución de demandas y gestiones legales en SST.",
     precio: "$500",
-    pregunta: "¿Cuentanos un poco del caso?"
+    pregunta: "¿Cuéntanos un poco del caso?"
   },
   "mapa-riesgo": {
     nombre: "Mapa de Riesgo",

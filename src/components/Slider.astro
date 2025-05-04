@@ -11,11 +11,38 @@ import 'swiper/css/effect-fade';
     <!-- Swiper container - Aumentado altura a 700px -->
     <div class="swiper hero-swiper h-[700px]">
       <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="relative h-full w-full">
+            <!-- Fondo con overlay mejorado -->
+            <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('/slider/slider2.webp');">
+              <div class="absolute inset-0 bg-gradient-to-b from-[#101828]/80 via-[#101828]/60 to-[#101828]/80"></div>
+            </div>
+            <!-- Contenido con mejor espaciado y animación -->
+            <div class="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center animate-fadeIn">
+              <span class="text-sm font-semibold uppercase tracking-wider text-[#F0A520] mb-2"> Nosotros</span>
+              <h1 class="text-5xl md:text-6xl font-bold text-white">
+                <span class="text-[#F0A520]">Somos</span> tu socio estratégico
+              </h1>
+              <div class="w-24 h-1 bg-[#F0A520] my-6"></div>
+              <p class="text-xl mt-4 text-gray-200 max-w-3xl mx-auto leading-relaxed">
+                En Seguridad y Salud somos tu socio estratégico que además de brindarte asesoría, realizamos un acompañamiento personalizado e integral. 
+                Al ser parte de tu empresa o negocio podrás ver notablemente los cambios en tu entorno laboral, reduciendo así tu inversión en seguridad 
+                y salud para priorizarla en tu verdadera necesidad con sustento técnico.
+              </p>
+              <a href="/servicios" 
+              class="mt-8 px-8 py-3 bg-[#F0A520] text-gray-900 font-semibold rounded-md hover:bg-[#e09918] transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#F0A520] focus:ring-opacity-50">
+                Descubre Nuestros Servicios
+              </a>
+            </div>
+          </div>
+        </div>
+
         <!-- Slide 1 -->
         <div class="swiper-slide">
           <div class="relative h-full w-full">
             <!-- Fondo con overlay mejorado -->
-            <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('/slider/slider1.png');">
+            <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('/slider/slider1.webp');">
               <div class="absolute inset-0 bg-gradient-to-b from-[#101828]/60 via-[#101828]/40 to-[#101828]/60"></div>
             </div>
             <!-- Contenido con mejor espaciado y animación -->
@@ -37,36 +64,12 @@ import 'swiper/css/effect-fade';
           </div>
         </div>
         <!-- Slide 2 -->
-        <div class="swiper-slide">
-          <div class="relative h-full w-full">
-            <!-- Fondo con overlay mejorado -->
-            <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('/slider/slider2.jpg');">
-              <div class="absolute inset-0 bg-gradient-to-b from-[#101828]/80 via-[#101828]/60 to-[#101828]/80"></div>
-            </div>
-            <!-- Contenido con mejor espaciado y animación -->
-            <div class="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center animate-fadeIn">
-              <span class="text-sm font-semibold uppercase tracking-wider text-[#F0A520] mb-2"> Nosotros</span>
-              <h1 class="text-5xl md:text-6xl font-bold text-white">
-                <span class="text-[#F0A520]">Somos</span> tu socio estratégico
-              </h1>
-              <div class="w-24 h-1 bg-[#F0A520] my-6"></div>
-              <p class="text-xl mt-4 text-gray-200 max-w-3xl mx-auto leading-relaxed">
-                En Seguridad y Salud somos tu socio estratégico que además de brindarte asesoría, realizamos un acompañamiento personalizado e integral. 
-                Al ser parte de tu empresa o negocio podrás ver notablemente los cambios en tu entorno laboral, reduciendo así tu inversión en seguridad 
-                y salud para priorizarla en tu verdadera necesidad con sustento técnico.
-              </p>
-              <a href="/nosotros" 
-              class="mt-8 px-8 py-3 bg-[#F0A520] text-gray-900 font-semibold rounded-md hover:bg-[#e09918] transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#F0A520] focus:ring-opacity-50">
-                Descubre más
-              </a>
-            </div>
-          </div>
-        </div>
+       
         
         <!-- Slide 3 -->
         <div class="swiper-slide">
           <div class="relative h-full w-full">
-            <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('/slider/slider3.jpg');">
+            <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('/slider/slider3.webp');">
               <div class="absolute inset-0 bg-gradient-to-b from-[#101828]/80 via-[#101828]/60 to-[#101828]/80"></div>
             </div>
             <div class="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center animate-fadeIn">
@@ -87,7 +90,7 @@ import 'swiper/css/effect-fade';
         <!-- Slide 4 -->
         <div class="swiper-slide">
           <div class="relative h-full w-full">
-            <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('/slider/slider4.jpg');">
+            <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('/slider/slider4.webp');">
               <div class="absolute inset-0 bg-gradient-to-b from-[#101828]/80 via-[#101828]/60 to-[#101828]/80"></div>
             </div>
             <div class="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center animate-fadeIn">

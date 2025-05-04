@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Slider from '../components/Slider.astro';
+import SliderContacto from '../components/sliderContacto.astro';
 const title = "Contáctanos - Alf S.A";
 const description = "¿Tienes preguntas? ¡Contáctanos! En Alf S.A estamos para ayudarte.";
 ---
@@ -10,14 +11,14 @@ const description = "¿Tienes preguntas? ¡Contáctanos! En Alf S.A estamos para
   
 
   <Header />
-  <Slider />
+  <SliderContacto />
  
 
 
   <section class="bg-gradient-to-br from-gray-100 to-gray-200 py-36">
     <div class="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
       <div class="rounded-xl overflow-hidden shadow-2xl">
-        <img src="/web/background.jpeg" alt="Equipo de trabajo analizando documentos" class="w-full h-auto object-cover">
+        <img src="/web/background.webp" alt="Equipo de trabajo analizando documentos" class="w-full h-auto object-cover">
       </div>
       <div class="space-y-6">
         <p class="text-sm font-semibold text-yellow-600 uppercase tracking-wider">NUESTRA PROPUESTA DE VALOR</p>
@@ -89,7 +90,7 @@ const description = "¿Tienes preguntas? ¡Contáctanos! En Alf S.A estamos para
   
   <section class="relative w-full bg-[#101828] py-16 bg-opacity-85 overflow-hidden">
     <!-- Fondo con efecto de imagen industrial semitransparente -->
-    <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('/web/background.jpeg'); opacity: 0.2;"></div>
+    <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('/web/background.webp'); opacity: 0.2;"></div>
     
     <div class="container mx-auto px-4 z-10 relative">
         <div class="flex flex-col lg:flex-row justify-between gap-8">
