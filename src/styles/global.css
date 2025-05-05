@@ -13,3 +13,26 @@ Header{
 Footer{
  background-color:#171A1E ;
 }
+
+html {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+/* Para navegadores basados en WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+display: contents;
+}
+
+/* Para Firefox */
+html {
+scrollbar-width: thin;
+}
+
+/* Para Internet Explorer y Edge antiguos */
+body {
+-ms-overflow-style: none;
+}
