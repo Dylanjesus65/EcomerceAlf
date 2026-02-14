@@ -1,38 +1,27 @@
 @import "tailwindcss";
 
-Header{
-  position: sticky;
-  top: 0; /* Esto hace que se quede pegada al tope de la página */
-  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-  background-color: #101828; /* Un fondo para que se vea bien */
-  background-color: white; /* Un fondo para que se vea bien */
-  
-  box-shadow: 0 2px 4px #F3A51B; /* Sombra opcional para dar un efecto de profundidad */
- 
-}
-Footer{
- background-color:#171A1E ;
-}
 
 html {
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 body {
   margin: 0;
   width: 100%;
   height: 100%;
 }
+
 /* Para navegadores basados en WebKit (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
-display: contents;
+  display: contents;
 }
 
 /* Para Firefox */
 html {
-scrollbar-width: thin;
+  scrollbar-width: thin;
 }
 
 /* Para Internet Explorer y Edge antiguos */
 body {
--ms-overflow-style: none;
+  -ms-overflow-style: none;
 }

@@ -4,77 +4,135 @@ import Layout from "../layouts/Layout.astro";
 const currentPath = Astro.url.pathname;
 ---
 
+  <!-- Barra superior con info de la empresa -->
+  <div class="w-full bg-[#0D1117] text-white text-sm py-2.5 px-6 hidden md:block">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <!-- Info izquierda -->
+      <div class="flex items-center gap-6">
+        <a href="mailto:info@alfseguridadysalud.com" class="flex items-center gap-2 text-gray-400 hover:text-[#F0A520] transition-colors duration-300">
+          <i class="fas fa-envelope text-[#F0A520] text-xs"></i>
+          <span>info@alfseguridadysalud.com</span>
+        </a>
+        <a href="https://wa.me/593992738731" target="_blank" class="flex items-center gap-2 text-gray-400 hover:text-[#F0A520] transition-colors duration-300">
+          <i class="fas fa-phone-alt text-[#F0A520] text-xs"></i>
+          <span>+593 99 273 8731</span>
+        </a>
+      </div>
 
-  <!-- Barra superior -->
-  <div class="w-full bg-[#1D2327] text-white text-sm py-4 px-6">
-    <div class="max-w-[1600px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-      <a href="/" class="flex items-center space-x-2">
-        <img src="/logo2.webp" alt="Logo" class="h-8" />
-      </a>
-
-      <div class="flex flex-wrap justify-center gap-6 text-center md:text-left">
-        <div class="flex items-center gap-2">
-          <img src="/iso.svg" alt="Certificación ISO" class="h-6" />
-          <span>Certificación ISO 9001</span>
+      <!-- Badges derecha -->
+      <div class="flex items-center gap-5">
+        <div class="flex items-center gap-1.5 text-gray-400">
+          <img src="/iso.svg" alt="ISO" class="h-4 opacity-70" />
+          <span>ISO 9001</span>
         </div>
-        <div class="flex items-center gap-2">
-          <img src="/24h.svg" alt="Servicio 24/7" class="h-6" />
-          <span>Servicio 24/7</span>
+        <span class="w-px h-4 bg-gray-700"></span>
+        <div class="flex items-center gap-1.5 text-gray-400">
+          <img src="/24h.svg" alt="24/7" class="h-4 opacity-70" />
+          <span>24/7</span>
         </div>
-        <div class="flex items-center gap-2">
-          <img src="/check.svg" alt="Personal Calificado" class="h-6" />
+        <span class="w-px h-4 bg-gray-700"></span>
+        <div class="flex items-center gap-1.5 text-gray-400">
+          <img src="/check.svg" alt="Calificado" class="h-4 opacity-70" />
           <span>Personal Calificado</span>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- Línea dorada decorativa -->
+  <div class="h-0.5 bg-gradient-to-r from-[#F0A520] via-[#F3A51B] to-[#D08700]"></div>
+
   <!-- Header principal -->
-  <header class="sticky top-0 z-50 bg-white shadow-md">
-    <div class="max-w-[1600px] mx-auto flex items-center justify-between px-6 py-4">
-      <a href="/" class="flex items-center w-36">
-        <img src="/logo2.webp" alt="Logo" class="h-12 w-full object-contain" />
+  <header class="sticky top-0 z-50 bg-white md:bg-white/95 md:backdrop-blur-md shadow-sm">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+      <!-- Logo -->
+      <a href="/" class="flex items-center group">
+        <img src="/logo2.webp" alt="ALF Seguridad y Salud" class="h-11 object-contain transition-transform duration-300 group-hover:scale-105" />
       </a>
 
-      <!-- Botón hamburguesa -->
-      <button id="menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none">
-        <span class="block w-8 h-0.5 bg-[#1D2327] mb-1 transition-all duration-300 ease-in-out"></span>
-        <span class="block w-8 h-0.5 bg-[#1D2327] mb-1 transition-all duration-300 ease-in-out"></span>
-        <span class="block w-8 h-0.5 bg-[#1D2327] transition-all duration-300 ease-in-out"></span>
+      <!-- Botón hamburguesa mejorado -->
+      <button id="menu-btn" class="md:hidden flex flex-col justify-center items-center w-11 h-11 rounded-lg hover:bg-gray-100 transition-colors duration-300 focus:outline-none" aria-label="Abrir menú">
+        <span class="block w-6 h-0.5 bg-[#0D1117] mb-1.5 transition-all duration-300 ease-in-out origin-center"></span>
+        <span class="block w-6 h-0.5 bg-[#0D1117] mb-1.5 transition-all duration-300 ease-in-out"></span>
+        <span class="block w-4 h-0.5 bg-[#0D1117] transition-all duration-300 ease-in-out origin-center self-start ml-[7px]"></span>
       </button>
 
-      <nav class="hidden md:flex space-x-8 font-semibold text-[#1D2327] text-lg">
-        <a href="/" class={`hover:text-[#F5B117] nav-link-desktop ${currentPath === '/' ? 'active-link' : ''}`}>Inicio</a>
-        <a href="/nosotros" class={`hover:text-[#F5B117] nav-link-desktop ${currentPath === '/nosotros' ? 'active-link' : ''}`}>Nosotros</a>
-        <a href="/contacto" class={`hover:text-[#F5B117] nav-link-desktop ${currentPath === '/contacto' ? 'active-link' : ''}`}>Contacto</a>
-        <a href="/servicios" class={`hover:text-[#F5B117] nav-link-desktop ${currentPath === '/servicios' ? 'active-link' : ''}`}>Servicios</a>
+      <!-- Navegación desktop -->
+      <nav class="hidden md:flex items-center gap-1">
+        <a href="/" class={`nav-link-desktop px-4 py-2 rounded-lg text-base font-semibold transition-all duration-300 ${currentPath === '/' ? 'active-link text-[#F0A520]' : 'text-[#1D2327] hover:text-[#F0A520] hover:bg-[#F0A520]/5'}`}>
+          Inicio
+        </a>
+        <a href="/nosotros" class={`nav-link-desktop px-4 py-2 rounded-lg text-base font-semibold transition-all duration-300 ${currentPath === '/nosotros' ? 'active-link text-[#F0A520]' : 'text-[#1D2327] hover:text-[#F0A520] hover:bg-[#F0A520]/5'}`}>
+          Nosotros
+        </a>
+        <a href="/servicios" class={`nav-link-desktop px-4 py-2 rounded-lg text-base font-semibold transition-all duration-300 ${currentPath === '/servicios' ? 'active-link text-[#F0A520]' : 'text-[#1D2327] hover:text-[#F0A520] hover:bg-[#F0A520]/5'}`}>
+          Servicios
+        </a>
+        <a href="/contacto" class={`nav-link-desktop px-4 py-2 rounded-lg text-base font-semibold transition-all duration-300 ${currentPath === '/contacto' ? 'active-link text-[#F0A520]' : 'text-[#1D2327] hover:text-[#F0A520] hover:bg-[#F0A520]/5'}`}>
+          Contacto
+        </a>
+
+        <!-- CTA de WhatsApp -->
+        <a href="https://wa.me/593992738731?text=Hola,%20estoy%20interesado%20en%20obtener%20información%20sobre%20sus%20servicios."
+           target="_blank"
+           class="ml-3 inline-flex items-center gap-2 bg-[#F0A520] text-white font-semibold text-base px-5 py-2.5 rounded-lg hover:bg-[#D08700] transition-all duration-300 shadow-sm hover:shadow-md hover:shadow-[#F0A520]/20 transform hover:-translate-y-0.5">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Cotizar
+        </a>
       </nav>
     </div>
 
-    <!-- Sidebar móvil -->
-    <div id="sidebar" class="fixed top-0 left-0 w-80 h-full bg-[#081126] transform -translate-x-full transition-transform duration-300 z-50">
-      <div class="flex items-center justify-between p-6">
-        <a href="/" class="flex items-center space-x-2">
+    <!-- Sidebar móvil mejorado -->
+    <div id="sidebar" class="fixed top-0 left-0 w-80 h-full bg-[#0D1117] transform -translate-x-full transition-transform duration-400 ease-out z-50 shadow-2xl">
+      <!-- Header del sidebar -->
+      <div class="flex items-center justify-between p-6 border-b border-white/10">
+        <a href="/" class="flex items-center">
           <img src="/logo2.webp" alt="Logo" class="h-10" />
         </a>
-        <button id="close-btn" class="text-white text-3xl font-bold">&times;</button>
+        <button id="close-btn" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[#F0A520] transition-all duration-300" aria-label="Cerrar menú">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
       </div>
-      <ul class="flex flex-col text-white font-semibold space-y-2 mt-6 px-6">
-        <li><a href="/" class="block py-4 border-b border-gray-700 hover:bg-gray-700 rounded">Inicio</a></li>
-        <li><a href="/nosotros" class="block py-4 border-b border-gray-700 hover:bg-gray-700 rounded">¿Quiénes Somos?</a></li>
-        <li><a href="/contacto" class="block py-4 border-b border-gray-700 hover:bg-gray-700 rounded">Contacto</a></li>
-        <li><a href="/servicios" class="block py-4 border-b border-gray-700 hover:bg-gray-700 rounded">Servicios</a></li>
-      </ul>
-      
-      <!-- Buscador -->
-      
+
+      <!-- Links del sidebar -->
+      <nav class="flex flex-col py-4 px-4">
+        <a href="/" class={`flex items-center gap-3 px-4 py-3.5 rounded-lg text-sm font-medium transition-all duration-300 ${currentPath === '/' ? 'bg-[#F0A520]/10 text-[#F0A520]' : 'text-gray-300 hover:bg-white/5 hover:text-white'}`}>
+          <i class="fas fa-home w-5 text-center text-xs"></i>
+          Inicio
+        </a>
+        <a href="/nosotros" class={`flex items-center gap-3 px-4 py-3.5 rounded-lg text-sm font-medium transition-all duration-300 ${currentPath === '/nosotros' ? 'bg-[#F0A520]/10 text-[#F0A520]' : 'text-gray-300 hover:bg-white/5 hover:text-white'}`}>
+          <i class="fas fa-users w-5 text-center text-xs"></i>
+          ¿Quiénes Somos?
+        </a>
+        <a href="/servicios" class={`flex items-center gap-3 px-4 py-3.5 rounded-lg text-sm font-medium transition-all duration-300 ${currentPath === '/servicios' ? 'bg-[#F0A520]/10 text-[#F0A520]' : 'text-gray-300 hover:bg-white/5 hover:text-white'}`}>
+          <i class="fas fa-briefcase w-5 text-center text-xs"></i>
+          Servicios
+        </a>
+        <a href="/contacto" class={`flex items-center gap-3 px-4 py-3.5 rounded-lg text-sm font-medium transition-all duration-300 ${currentPath === '/contacto' ? 'bg-[#F0A520]/10 text-[#F0A520]' : 'text-gray-300 hover:bg-white/5 hover:text-white'}`}>
+          <i class="fas fa-envelope w-5 text-center text-xs"></i>
+          Contacto
+        </a>
+      </nav>
+
+      <!-- CTA WhatsApp en sidebar -->
+      <div class="absolute bottom-0 left-0 right-0 p-4 border-t border-white/10">
+        <a href="https://wa.me/593992738731?text=Hola,%20estoy%20interesado%20en%20obtener%20información%20sobre%20sus%20servicios."
+           target="_blank"
+           class="flex items-center justify-center gap-2 w-full bg-[#F0A520] text-white font-semibold text-sm py-3 rounded-lg hover:bg-[#D08700] transition-all duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Cotizar por WhatsApp
+        </a>
+      </div>
     </div>
 
-    <!-- Fondo oscuro cuando se abre el menú -->
-    
-    <div id="overlay" class="fixed inset-0 bg-gradient-to-b from-transparent to-black bg-opacity-50 hidden z-40"></div>
-
-
+    <!-- Overlay oscuro -->
+    <div id="overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden z-40 transition-opacity duration-300"></div>
 
   </header>
 
@@ -89,19 +147,17 @@ const currentPath = Astro.url.pathname;
       menuBtn.addEventListener('click', () => {
         sidebar.classList.remove('-translate-x-full');
         overlay.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
       });
 
-      closeBtn.addEventListener('click', () => {
+      const closeSidebar = () => {
         sidebar.classList.add('-translate-x-full');
         overlay.classList.add('hidden');
-      });
+        document.body.style.overflow = '';
+      };
 
-      overlay.addEventListener('click', () => {
-        sidebar.classList.add('-translate-x-full');
-        overlay.classList.add('hidden');
-      });
-    } else {
-      console.error('Uno o más elementos necesarios para la funcionalidad del menú no se encontraron en el DOM.');
+      closeBtn.addEventListener('click', closeSidebar);
+      overlay.addEventListener('click', closeSidebar);
     }
   });
 </script>
@@ -109,30 +165,32 @@ const currentPath = Astro.url.pathname;
   <style>
     .nav-link-desktop {
       position: relative;
-      text-decoration: none;
-      padding-bottom: 0.25rem;
-      transition: color 0.3s ease;
     }
 
     .nav-link-desktop::after {
       content: '';
       position: absolute;
-      left: 0;
+      left: 50%;
       bottom: 0;
       width: 0%;
-      height: 3px;
-      background-color: #F5B117;
-      transition: width 0.3s ease-in-out;
+      height: 2px;
+      background: linear-gradient(90deg, #F0A520, #D08700);
+      border-radius: 2px;
+      transition: all 0.3s ease-in-out;
+      transform: translateX(-50%);
     }
 
     .nav-link-desktop:hover::after,
-    .nav-link-desktop:focus::after,
-    .nav-link-desktop:active::after {
-      width: 100%;
+    .nav-link-desktop:focus::after {
+      width: 60%;
     }
 
     .active-link::after {
-      width: 100%;
+      width: 60% !important;
+    }
+
+    /* Efecto de scroll: header se compacta */
+    header {
+      transition: padding 0.3s ease, box-shadow 0.3s ease;
     }
   </style>
-</Layout>
